@@ -2,9 +2,16 @@
 .wrap{width: 100%;}
 header,main,footer{width: 1280px;margin: 0  auto;}
 header{display: flex; flex-flow: column;  padding: 25px 0;}
-.search_bar{display: flex;width: 710px; height: 62px;border: 1px solid #519b71;border-radius: 62px;margin: 0 auto;}
-.logo a{display: flex;width:68px;height: 62px;padding-left: 28px;padding-right: 16px;box-sizing: border-box;   justify-content: center;align-items: center;}
+.search_bar{
+    position: relative; display: flex;width: 710px; height: 60px;border: 1px solid #519b71;border-radius: 62px;margin: 0 auto;box-sizing: border-box;padding: 15px 0;align-items: center;}
+.search_bar:hover{
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
 
+}
+.logo a{display: flex;width:68px;height: 60px; padding-left: 28px;padding-right: 16px;box-sizing: border-box;   justify-content: center;align-items: center;}
+header>section{
+    height: 100%;
+}
 .logo a::after{  
         content: "";
         display:flex;
@@ -20,6 +27,7 @@ form{
     align-items: center;
 }
 .keyboard{
+    cursor: pointer;
     border: 0;
     background: url('../img/sp_main.2b26eb67.png') no-repeat ;
     background-size: 434px 416px ;    
@@ -28,6 +36,7 @@ form{
 	height: 14px;
 }
 .search_history{
+    cursor: pointer;
     padding:0;
     border: 0;
     background: url('../img/sp_main.2b26eb67.png') no-repeat ;
@@ -35,8 +44,47 @@ form{
     background-position: -318px -248px;
     width: 10px;
     height: 6px;
+    margin-left: 12px;
 }
+#search{
+    margin-left: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    width: 480px;
+    height: 27px;
+    font-size: 18px;
+    outline: none;
+}
+#search::placeholder{
+    color:rgba(0, 0, 0, 0.2);
+}
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration{
+    display:none;}
+
+#search div{
+    display: flex ;
+    align-items: center;
+}
+
+.search_bar div{
+    position: absolute;
+    right: 65px;
+    display: flex;
+    justify-content: center;
+align-items: center;
+}
+
 .search_button{
+    cursor: pointer;
+    right: 27px;
+    top:50%;
+    transform: translateY(-50%);
+    position: absolute;
     background: url('../img/sp_main.2b26eb67.png') no-repeat ;
     background-size: 434px 416px ;    
     background-position: -214px -333px;
@@ -52,42 +100,39 @@ form{
     justify-content: space-between;
 }
 .side_menu>div{    display: flex;}
-.side_menu>div a{  padding: 3px;}
-.side_menu>div a::before{margin:5px;}
-.menu_button{
-    width: 46px;
-    height: 46px;
-    display: flex;
+.side_menu>div a{
+    
     position: relative;
-    justify-content: center;
-    align-items: center;
+    width: 45px;height: 45px;  padding: 1px;}
+/* .side_menu>div a::before{margin:5px;} */
+.side_menu>div a:hover:before{
+    content: "";
+    position: absolute;
+    width: 47px;
+    height: 47px;
+    display: inline-block;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;    
+    background: #f5f7f8 ;
+    transform: translate(-50%,-50%);
 }
 .menu_button::after{
+    top: 0;
+    left: 0;
     position: absolute;
     content: "";
-    float: left;
+    /* float: left; */
     display: block;
     background: url('../img/sp_main.2b26eb67.png') no-repeat ;
     background-size: 434px 416px ;    
     background-position:  -1px -336px;
     border: 0;
-    margin: 2px;
+    margin: 13px 11px;
     width: 25px;
     height: 20px;
 }
-.menu_button:hover::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;    
-    background: #f5f7f8;
-}
+
 .n_pay{
     width: 46px;
     height: 46px;
@@ -198,39 +243,56 @@ form{
 .short_cut_menu{
     display: flex;
     justify-content: center;
+    margin-top: 10px;
 }
 .short_cut_menu>li+li{
     margin-left: 10px;
 }
-
+.short_cut_menu>li{
+    position: relative;
+}
 .short_cut_menu>li a{
     position: relative;
     display: flex;
     flex-flow: column;
     align-items: center;
     width: 52px;
-    height: 73px;
+    height: 81px;
 }
 .short_cut_menu>li a::before{
     flex: none;
     position: relative;
-    margin: 10px 0;
     content:"";
     display: flex;
     background: url('../img/sp_main.2b26eb67.png') no-repeat ;
     background-position:  -1px -129px;
     background-size: 434px 416px ;    
-    width: 51px;
+    width: 52px;
     height: 52px;
+    margin-bottom: 10px;
 }
+.short_cut_menu>li:hover::before{
+    content: "";
+    width: 45px;
+    height: 45px;
+    top: 25%;
+    left:50%;
+    transform: translate(-50%,-35%);
+    display: flex;
+    position: absolute;
+    border-radius: 17px;
+    box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.3);
+}
+
 .short_cut_menu>li a::after{
     content: "";
-    top: 50%;
-    left: 50%;
+    top: 25%;
+    left:50%;
     position: absolute;
-    transform: translate(-50%,-50%);
-    width: 35px;
+    transform: translate(-50%,-35%);
+    width: 36px;
     height: 35px;
+
 }
 
 .mail_icon::after{
@@ -274,11 +336,17 @@ form{
     background-position:  -50px -212px;
 
 }
-.map_icon::after{
+.short_cut_menu .map_icon::before{
+    width: 52px;
     background: url('../img/sp_main.2b26eb67.png') no-repeat ;
     background-size: 434px 416px ;    
-    background-position:  -206px -5px;
-
+    background-position:  0 -128px;
+}
+.short_cut_menu .map_icon::after{
+    background: url('../img/sp_main.2b26eb67.png') no-repeat ;
+    background-size: 434px 416px ; 
+    background-position: -199px -5px;
+    width: 50px ;
 }
 .webtoon_icon::after{
     background: url('../img/sp_main.2b26eb67.png') no-repeat ;
@@ -291,9 +359,19 @@ form{
     background-size: 32px 32px ;    
     
 }
-.s_c_icon::after{
+.short_cut_menu .s_c_icon::after{
     background: url('../img/sp_main.2b26eb67.png') no-repeat ;
     background-size: 434px 416px ;    
     background-position:  -254px -140px;
-
+    transform: translate(-50%,-15%);
 }
+.short_cut_menu .s_c_icon{
+    height: 52px;
+}
+/* IE9,10 */
+@media screen and (min-width:0\0){
+    /* Enter your style code */
+    .short_cut_menu>li{
+        float: left;
+    }
+} 
