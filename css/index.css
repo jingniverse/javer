@@ -1,6 +1,6 @@
 .blind{position:absolute;width:1px;height:1px;overflow:hidden;z-index:-1;border:0;clip-path: polygon(0 0, 0 0, 0 0);}
 .wrap{width: 100%;}
-header,main,footer{width: 1280px;margin: 0  auto;}
+header,main,footer>div{width: 1280px;margin: 0  auto;}
 header{display: flex; flex-flow: column;  padding: 25px 0 60px;}
 
 
@@ -641,6 +641,16 @@ main .left_content>*{border: 1px solid black;}
     width: 420px;
     height: 80px;
 }
+
+footer{
+    background: #f5f6f8;
+    height: 300px;
+}
+footer>div{
+    border: 1px solid #519b71;
+    height: 100%;
+}
+
 /* IE9,10 */
 @media screen and (min-width:0\0){
     /* Enter your style code */
