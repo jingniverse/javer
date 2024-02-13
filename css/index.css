@@ -393,9 +393,10 @@ input::-webkit-search-decoration,input::-webkit-search-cancel-button,input::-web
     /* border: 1px solid; */
     top:33%;
     left: 50%;
-    transform: translate(-50%,-50%);    
     background: url('../img/sp_main.ae81c9d5.png') no-repeat ;
     background-size: 444px 434px;
+    transform: translate(-50%,-50%);    
+    -moz-transform: translate(18%,44%);
 }
 .short_cut_menu .mail_icon a::after{
     background-position:-254px -94px;
@@ -1427,5 +1428,7 @@ header,main,footer>div{
 margin-top: 0;
 margin-left: 28px ;
 }
-
-} 
+@supports (-webkit-appearance:none) {
+	/* 이 안에 Safari(10.1 이상)에서만 적용할 스타일 작성 */
+}
+}
