@@ -671,6 +671,7 @@ main .left_content>*{
     justify-content: center;
     color: rgba(8,8,8,.5);
     font-weight: bold;
+    -webkit-font-smoothing: antialiased;
 }
 .m_news_type li.on{
     color: #080808;
@@ -704,8 +705,9 @@ main .left_content>*{
     letter-spacing: -0.42px;
 }
 .m_n_t_enter{
-    letter-spacing:-0.15px;
+    letter-spacing:-0.05px;
 }
+.m_news_type .m_n_t_sports{}
 .m_news_type .m_n_t_enter::before{
     margin: 0 12px  0 13px;
 }
