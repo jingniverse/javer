@@ -351,6 +351,9 @@ input::-webkit-search-decoration,input::-webkit-search-cancel-button,input::-web
     padding: 19px 23px 0;
     box-sizing: border-box;
 }
+.short_cut_menu .s_c_icon{
+    height:55px;
+}
 .short_cut_menu li{
     position: relative;
     width: 50px;
@@ -965,9 +968,10 @@ align-items: center;
     align-items: center;
     box-sizing: border-box;
     padding: 9px 0 11px;
+    position: relative;
 }
 .m_news_arrow span{
-    margin:0 12px 0 23px;
+    margin:0 6px 0 18px;
     letter-spacing: -0.3px;
     padding-right: 12px;
 }
@@ -976,6 +980,39 @@ align-items: center;
     font-weight: 600;
     color: #4768bb;}
 .prev_b{transform: rotate(180deg);}
+.m_news_arrow>div{
+    position: absolute;
+    width: 57px;
+    right: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.list_btn,.box_btn{
+    width: 18px;
+    height: 18px;
+    background: url(../img/sp_main.ae81c9d5.png);
+    background-size: 444px 434px;
+    border: 0;
+}
+.list_btn{
+    background-position: -392px -206px;
+}
+.box_btn{
+    background-position: -120px -92px;
+}
+.list_btn:hover{
+    background-position: -392px -185px
+}
+.list_btn.active{
+    background-position: -392px -290px;
+}
+.box_btn:hover{
+    background-position: -120px -71px;
+}
+.box_btn.active{
+    background-position: -199px -301px;
+}
 
 /* .m_news_arrow .prev_b,.m_news_arrow .next_b{
     margin-bottom: 3px;
@@ -1005,10 +1042,10 @@ align-items: center;
 
 .main_shopping{
     width: 830px;
-    height: 562px;
+    height: 560px;
 }
 .main_shopping .content_wrap{
-    padding:18px 20px 20px
+    padding:18px 20px 2px
 }
 .main_shopping a:hover{
     text-decoration: underline;
@@ -1060,9 +1097,9 @@ align-items: center;
     letter-spacing: -0.4px;
     align-items: center;
 }
-.m_sub_title a:hover{
+/* .m_sub_title a:hover{
     text-decoration: underline;
-}
+} */
 .shop_today{
     display: flex;
     align-items: center;
@@ -1122,13 +1159,14 @@ align-items: center;
     display: flex;
     flex-flow: row wrap;
     width: 522px;
-    height: 372px;
-    margin-right: 18px;
+    height: 375px;
+    margin-right: 19px;
 }
 .goods_list a div{
     width: 98px;
     height: 126px;
     overflow: hidden;
+    border-radius: 5px;
 }
 
 .goods_list a{
@@ -1158,13 +1196,16 @@ align-items: center;
     line-height: 19px;
     letter-spacing: -.4px
 }
+.goods_list li div p:hover{
+    text-decoration: underline;
+}
 .s_mall_list{
     font-size: 13px;
     line-height: 20px;
     letter-spacing: -.6px;
     box-sizing: border-box;
     width: 248px;
-    height: 84px;
+    height: 88px;
     display: flex;
     flex-flow: column;
     border: 1px solid #ebebeb;
@@ -1227,9 +1268,13 @@ align-items: center;
     border-radius: 5px;
     background: #fafbfd;
     box-sizing: border-box;
-    padding: 8px 18px;
+    padding: 8px 10px;
     /* font-size: 13px ; */
     justify-content: space-between;
+}
+
+.m_s_short_cut li {
+    width: 55px;
 }
 .m_s_short_cut li a{
     display: flex;
@@ -1237,6 +1282,7 @@ align-items: center;
     position: relative;
     align-items: center;
     line-height: 17px;
+    font-size: 13px;
     }
 .m_s_short_cut li a::before{
     content: "";
@@ -1244,16 +1290,16 @@ align-items: center;
     justify-content: center;
     align-items: center;
     background: white;
-    width: 34px;
-    height: 34px;
+    width: 32px;
+    height: 32px;
     border: 1px solid #ebebeb;
-    margin-bottom: 6px;
+    margin-bottom: 4px;
     border-radius: 50%;
 }
 .m_s_short_cut a::after{
     position: absolute;
-    top:24%;
-    left: 51%;
+    top:23%;
+    left: 50%;
     transform: translate(-50%,-25%);
     content: "";
 }
@@ -1286,7 +1332,9 @@ align-items: center;
 }
 
 .shop_ad{
-    /* font-size: 13px; */
+    font-size: 1.3rem;
+    line-height: 19px;
+    letter-spacing: -0.5px;
 }
 .shop_ad img{
     border-radius: 5px;
@@ -1294,7 +1342,7 @@ align-items: center;
     width: 246px;
     height: 144px;
     object-fit: contain;
-    margin-bottom: 12px;
+    margin-bottom: 5px;
 }
 .shop_ad span{
     display: flex;
