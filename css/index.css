@@ -1628,15 +1628,15 @@ align-items: center;
     display: flex;
     flex-flow: row wrap;
 }
-.right_content article>*{border: 1px solid #ebebeb;  border-radius: 8px;}
+.right_content article>*{ box-shadow: 0 0 0 1px #e3e5e8, 0 1px 2px 0 rgba(0,0,0,.04); border-radius: 8px;}
 .right_content article>*+*{margin-top: 15px;}
 #login{
     display: flex;
     flex-flow: column;
-    width: 422px;
-    height: 166px;
+    width: 420px;
+    height: 164px;
     box-sizing: border-box;
-    padding: 25px 20px 22px;
+    padding: 23px 20px 22px;
     /* font-size: 14px; */
     align-items: center;
 }
@@ -1648,7 +1648,13 @@ align-items: center;
     margin: 0 13px;
     background: #ebebeb;
 }
-
+#login span{
+    letter-spacing: -0.5px;
+}
+#login .cs{
+    letter-spacing: -0.5px;
+    font-size: 1.3rem;
+}
 
 
 .login_box{ 
@@ -1660,7 +1666,8 @@ align-items: center;
     color: white  ;
     background: #03c75a;
     border-radius: 5px;
-    margin: 15px 0 20px;
+    margin: 13px 0 18px;
+    flex: none;
 }
 .login_box::before{
     content: "";
