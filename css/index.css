@@ -632,11 +632,10 @@ main{
     margin-right: 28px;
 }
 .ad_left{    
-    width: 830px;    
-    height: 130px; 
+    width: 832px;    
+    height: 132px; 
     overflow: hidden;
     /* box-sizing: border-box; */
-    border: 1px solid #fafbfb ;
 }
 .ad_left img{    
     width: 100%;    
@@ -1156,7 +1155,12 @@ align-items: center;
     align-items: center;
     margin-left:14px ;
     font-size: 1.3rem;
+    font-weight: bold;
 }
+.m_shop_arrow span i{
+    color: #aaaaaa ;
+}
+.m_shop_arrow span i{}
 .m_shop_arrow .prev_b{
     border-radius:0 5px 5px 0;
     margin-left: 9px;   
@@ -1441,12 +1445,21 @@ align-items: center;
     border: 1px solid #ebebeb;
     height: 36px;
     line-height: 34px;
-    padding: 0 12px;
     background: white;
     border-radius:18px ;
     text-align: center;
     box-sizing: border-box;
     letter-spacing: -0.5px;
+}
+.b_s_c_category li a{
+    height: 35px;
+    line-height: 34px;
+    padding: 0 12px;
+    border-radius:18px ;
+    text-align: center;
+    box-sizing: border-box;
+    letter-spacing: -0.5px;
+    display: inline-block;
 }
 .b_s_c_category li+li{
     margin-left: 4px;
@@ -1651,6 +1664,7 @@ align-items: center;
 } */
 
 .right_content{
+    margin-top: 1px;
     max-width: 872px;
     width: 100%;
     min-width: 422px;
@@ -1675,7 +1689,7 @@ align-items: center;
     /* font-size: 14px; */
     align-items: center;
 }
-#login>div a+a::before{
+#login>div li+li::before{
     content: "";
     display: inline-block;
     width: 1px;
@@ -1690,7 +1704,12 @@ align-items: center;
     letter-spacing: -0.5px;
     font-size: 1.3rem;
 }
-
+.cs ul{
+    display: flex;
+}
+.cs ul li a:hover{
+    text-decoration: underline;
+}
 
 .login_box{ 
     display: flex;
@@ -1717,7 +1736,7 @@ align-items: center;
 
 .ad_right{
     width: 420px;
-    height: 242px;
+    height: 244px;
     overflow: hidden;
     margin-top: 16px;
 }
