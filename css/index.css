@@ -1943,8 +1943,7 @@ align-items: center;
     font-size: 1.3rem;
     text-align: center;
 }
-.time1 .w_temp{
-}
+
 .time2 .w_temp{
     margin-top: 23px;
 }
@@ -2112,10 +2111,16 @@ justify-content: space-between;
 .stock_list li+li{
     margin-top: 10px;
 }
+.stock_list li a{
+    display: block;
+    height: 29px;
+}
 .stock_list li p{
     display: flex;
     justify-content: space-between;
     letter-spacing: -0.5px;
+    align-items: center;
+ 
 }
 .stock_list li span{
     display: flex;
@@ -2136,15 +2141,151 @@ justify-content: space-between;
     background: url(../img/sp_main.ae81c9d5.png) -433px -285px;
 	background-size: 444px 434px;
 	width: 7px;
-	height: 11px;
-    margin-top: 2px;
-    margin-right: 2px;
+	height: 15px;
+    margin-top: 3px;
+    padding-left: 2px;
+    border:none;
+    cursor: pointer;
 }
-
 .widget{
     width: 420px;
     height: 805px;
+    padding: 18px 17px 23px;
+    box-sizing: border-box;
+    background: #f4f6fa;
 }
+    
+.widget>.title{
+    width: 100%;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+.widget_list{
+    display: flex;
+    flex-flow: wrap;
+}
+.widget_list>*{
+    background: white;
+}
+    
+.widget_list a{
+    width: 186px;
+    height: 192px;
+    border: 1px solid #ebebeb;
+    border-radius:8px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    letter-spacing: -0.5px;
+}
+.widget_list a+a{
+    margin-left: 10px;
+}
+.widget_list a:nth-of-type(2n+1){
+    margin-left: 0;
+}
+
+.widget_list .calender .title{
+    height: 48px;
+    box-sizing: border-box;
+    padding: 18px 19px 0;
+    font-weight: bold;
+
+}
+.widget_list .calender .today{
+    font-size: 3.9rem;
+    padding: 12px 17px 0;    
+    letter-spacing: -1.4px;
+
+}
+.widget_list .calender .today span{
+    font-size: 1.3rem;
+}
+.widget_list .calender .login{
+    margin-top: 54px;
+    height: 50px;
+    text-decoration: underline;
+    padding: 11px 18px 0 ;
+    box-sizing: border-box;
+}
+.widget_list .memo{
+    display: flex;
+    flex-flow: column;
+}
+.widget_list .memo .title{
+    background: #00c16e ;
+    height: 48px;
+}
+.widget_list .memo .title p{
+    color: white;
+    font-weight: bold;
+    height: 46px;
+    padding: 16px 19px 0;
+    letter-spacing: -0.3px;
+    border-bottom: 1px dashed #66d5a6;
+    box-sizing: border-box;
+}
+.widget_list .memo div{
+    height: 46px;
+}
+.widget_list .memo .login{
+    height: 50px;
+    text-decoration: underline;
+    padding: 13px 18px 0 ;
+    box-sizing: border-box;
+    letter-spacing: -0.2px;
+}
+.widget_list .memo .line{
+    border-top: 1px solid #ebebeb;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.widget_list .papago .title{
+    display: flex;
+    padding: 19px 18px 0;
+    flex-flow: column;
+}
+.widget_list .papago .title::before{
+    content: "";
+    display: flex;
+    background: url(../img/sp_main.ae81c9d5.png)no-repeat -56px -255px;
+	background-size: 444px 434px;
+	width: 76px;
+	height: 16px;;
+}
+.widget_list .papago span{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}   
+.widget_list .papago .title::after{   content: "";
+    display: flex;
+    background: url(../img/sp_main.ae81c9d5.png)no-repeat -1px -1px;
+	background-size: 444px 434px;
+	width: 66px;
+	height: 66px;
+    margin-left: 33px;
+    margin-top: 20px   ;  
+    margin-bottom: 19px;  
+}
+.widget_list .papago span::after{   content: "번역하기";
+    width: 124px;
+    height: 40px;
+    background: #00a2ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+}
+.widget_list .papago:hover span::after{  
+    background: #1280e2;
+ }
+    .widget_list .vibe{
+    
+}
+
 .ad_right2,.whale{
     width: 420px;
     height: 80px;
@@ -2154,13 +2295,6 @@ justify-content: space-between;
     width: 100%;
     height: 100%;
 }
-
-
-
-
-
-
-
 
 
 
@@ -2182,25 +2316,25 @@ footer>div{
 } 
 @media all and (min-width:2560px){
  
-    .wrap{width: 100%; max-width: 1732px;
+    .wrap{width: 100%; max-width: 1730px;
         box-sizing: border-box;
 margin: 0 auto;}
 .right_content{
-    max-width: 872px;
+    max-width: 870px;
     width: 100%;
-    min-width: 422px;
+    min-width: 420px;
     box-sizing: border-box;
     display: flex;
     flex-flow: row wrap;
 }
 header,main,footer>div{
-    width: 1732px;
+    width: 1730px;
     margin: 0  auto;
     box-sizing: border-box;
 }
 .widget_board{
 margin-top: 0;
-margin-left: 28px ;
+margin-left: 30px ;
 }
 @supports (-webkit-appearance:none) {
 	/* 이 안에 Safari(10.1 이상)에서만 적용할 스타일 작성 */
