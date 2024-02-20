@@ -2169,7 +2169,7 @@ justify-content: space-between;
     background: white;
 }
     
-.widget_list a{
+.widget_list>   a{
     width: 186px;
     height: 192px;
     border: 1px solid #ebebeb;
@@ -2178,7 +2178,7 @@ justify-content: space-between;
     overflow: hidden;
     letter-spacing: -0.5px;
 }
-.widget_list a+a{
+.widget_list>a+a{
     margin-left: 10px;
 }
 .widget_list a:nth-of-type(2n+1){
@@ -2288,6 +2288,9 @@ justify-content: space-between;
 .widget_list .dictionary{
     position: relative;
 }
+.widget_list .dictionary .title:hover{
+    text-decoration: underline;
+}
 .widget_list .dictionary .title{
     height: 52px;
     padding: 17px 18px 0;
@@ -2361,6 +2364,7 @@ justify-content: space-between;
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 .widget_list .dictionary .search:hover{
     width: 132px;
@@ -2397,24 +2401,143 @@ justify-content: space-between;
     align-items: center;
     color: white;
 }
+.widget_list .vibe{
+    width:384px;
+    height: 278px;
+    border: 1px solid #ebebeb;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.widget_list .vibe .title{
+    display: flex;
+    padding:18px 0 0 18px;
+    font-weight: bold;
+    letter-spacing: -0.5px;
+    align-items: center;
+    margin-bottom:15px;
+}
+.widget_list .vibe .title::before{
+    content: "";
+    display: flex;
+    background: url(../img/sp_main.ae81c9d5.png) no-repeat -69px -281px;
+	background-size: 444px 434px;
+	width: 68px;
+	height: 17px;
+    margin-right: 8px;
+}
+.vibe_list{
+    padding-left: 18px;
+    display: flex;
+}
+.vibe_list li+li{
+    margin-left: 12px ;
+}
 
-
-
-
-
-
- .widget_list .vibe{
-    
+.vibe_list .pic{
+    position: relative;
+    display: flex;
+    width: 108px;
+    height: 162px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.vibe_list .pic::after{
+    position: absolute;
+    content: "";
+    display: flex;
+    width: 28px; 
+}
+.vibe_list img{
+    width: 100%;
+    height: 100%;
+    transition: .6s all ease 0s;
+}
+.vibe_list img:hover{
+    transform: scale(1.1);
+}
+.vibe_list .phrase span{
+    font-size: 1.4rem;
+    letter-spacing: -0.5px;
+}
+.widget_list .mobile::before{
+    content: "";
+    display: flex;
+    background: url(../img/sp_main.ae81c9d5.png) no-repeat -391px -73px;
+	background-size: 444px 434px;
+	width: 22px;
+	height: 22px;
+    margin-right: 11px;
+}
+.widget_list .mobile::after{
+    content: ""; 
+    display: flex;
+    background: url(../img/sp_main.ae81c9d5.png)-433px -285px;
+	background-size: 444px 434px;
+	width: 7px;
+	height: 11px;
+    margin-left: auto;
+    margin-right: 5px;
+}
+.widget_list .mobile{
+    box-sizing: border-box;
+    margin-top: 22px;
+    width: 100%;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    border: none;
+    background: none;
+    border-radius: 0;
+    padding-left:4px ;
+}
+.mobile span{
+    font-weight: bold;
+    margin-right: 5px;
 }
 
 
 
+.whale{
+    position: relative;
+    padding:20px 18px 0;
+    box-sizing: border-box;
+    display: flex;
+}
+.whale .down,.whale .naver_app{
+    display: none;
+    flex-flow: column wrap;
+    height: 42px;
+    align-content:flex-start;
+    justify-content: center;
+}
+.whale .down .title,.whale .naver_app .title{
+    font-weight: bold;
+}
+.whale .down.on,.whale .naver_app.on{
+    display: flex;
+    opacity: 1;
+    pointer-events: all;
+}
 
-
-
-
-
-
+.whale .down::before{
+    content: "";
+    display: flex;
+    background: url(../img/sp_main.ae81c9d5.png) no-repeat -201px -143px;
+    background-size: 444px 434px;
+	width: 42px;
+	height: 36px;;
+    margin-right: 12px;
+}
+.whale .naver_app::before{
+    content: "";
+    display: flex;
+    background: url(../img/whale3.png);
+    background-size: 42px;
+    width: 42px;
+    height: 42px;
+    margin-right: 12px;
+}
 
 .ad_right2,.whale{
     width: 420px;
@@ -2425,7 +2548,27 @@ justify-content: space-between;
     width: 100%;
     height: 100%;
 }
-
+.page_ad{
+    bottom: 50%;
+    transform: translateY(50%);
+    right: 18px;
+    position: absolute;
+    width: 16px;
+    height: 8px;
+    display: flex;
+    align-items: center;
+}
+.page_ad li{
+    background: #d9dadc;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+}
+.page_ad li.on{
+    background: #03c75a;
+}
+.page_ad li+li{
+    margin-left: 4px;}
 
 
 footer{
