@@ -2258,13 +2258,14 @@ justify-content: space-between;
     flex-flow: column;
     align-items: center;
 }   
-.widget_list .papago .title::after{   content: "";
+.widget_list .papago .title::after{  
+     content: "";
     display: flex;
     background: url(../img/sp_main.ae81c9d5.png)no-repeat -1px -1px;
 	background-size: 444px 434px;
 	width: 66px;
 	height: 66px;
-    margin-left: 33px;
+    margin-left: 37px;
     margin-top: 20px   ;  
     margin-bottom: 19px;  
 }
@@ -2289,12 +2290,10 @@ justify-content: space-between;
 }
 .widget_list .dictionary .title{
     height: 52px;
-    padding: 19px 18px 0;
+    padding: 17px 18px 0;
     box-sizing: border-box;
     font-weight: bold;
-}
-.widget_list .dictionary div{
-    
+    letter-spacing: 0.7px
 }
 .widget_list .dictionary div::after{
     position: absolute;
@@ -2328,24 +2327,23 @@ justify-content: space-between;
     position: relative;
     display: flex;
     width: 100%;
-    z-index: 2;
 } 
 .widget_list .dictionary .phrase{
     padding: 0 17px;
     font-size: 1.7rem;
     font-weight: bold;
-    line-height: 2rem;
+    line-height: 28px;
 }
-.widget_list .dictionary span::after{
-    top: -18px;
+.widget_list .dictionary> span::before{
+    top: -20px;
     left: 0;
     position: absolute;
     display: flex;
     width: 178px;
-    height: 120px;
+    height: 130px; 
     content: "";
-    background-image: -webkit-linear-gradient(top , transparent, transparent 1.7rem, #D4E6CE 0);
-    background-size: 100% 1.75rem;
+    background-image: -webkit-linear-gradient(top , transparent, transparent 1.95rem, #e8effb 0);
+    background-size: 100% 2rem;
 }
 .widget_list .dictionary .search span::after{
     background-image: none;
@@ -2356,8 +2354,48 @@ justify-content: space-between;
     right: 15px;
     width: 38px;
     height: 38px;
-    border-radius: 50%;
+    border-radius: 30px;
+    background: white;
     border: 1px solid #dbdde0;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.widget_list .dictionary .search:hover{
+    width: 132px;
+    height: 40px;
+    border-radius:20px ;
+    background-color:#031f5f ;
+    border: 1px solid #031f5f;
+}
+.widget_list .dictionary .search::after{
+    content: "";
+    display: flex;
+    justify-content: center;align-items: center;
+    background: url(../img/sp_main.ae81c9d5.png)-303px -362px;
+	background-size: 444px 434px;
+	width: 18px;
+	height: 18px;
+    margin-left: 2px;
+}
+.widget_list .dictionary .search:hover::after{
+    background: url(../img/sp_main.ae81c9d5.png)-45px -386px;
+	background-size: 444px 434px;
+	width: 15px;
+	height: 15px;
+}
+.widget_list .dictionary .search span{
+    display: none;
+    }
+.widget_list .dictionary .search:hover span{
+    display: flex;
+    width: 90px;
+    font-size:1.3rem;
+    opacity: 1;
+    justify-content: center;
+    align-items: center;
+    color: white;
 }
 
 
