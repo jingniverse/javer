@@ -1377,9 +1377,9 @@ align-items: center;
 .main_etc{
     margin-top: 16px;
     width: 830px;
-    height: 1145px;
+    height: 1144px;
     box-sizing: border-box;
-    margin-bottom: 74px;
+    margin-bottom: 59px;
 }
 .main_etc .content{
     display: flex;
@@ -2414,7 +2414,7 @@ justify-content: space-between;
     font-weight: bold;
     letter-spacing: -0.5px;
     align-items: center;
-    margin-bottom:15px;
+    margin-bottom:14px;
 }
 .widget_list .vibe .title::before{
     content: "";
@@ -2438,7 +2438,7 @@ justify-content: space-between;
     display: flex;
     width: 108px;
     height: 162px;
-    border-radius: 8px;
+    border-radius: 5px;
     overflow: hidden;
     margin-bottom: 10px;
 }
@@ -2452,6 +2452,8 @@ justify-content: space-between;
     background: rgba(0, 0, 0, 0.5)  ;
     right: 8px;
     bottom: 8px;
+    justify-content: center;
+    align-items: center;
 }
 .vibe_list .pic span::after{
     content: "";
@@ -2460,9 +2462,8 @@ justify-content: space-between;
     align-items: center;
     background:url(../img/sp_main.ae81c9d5.png)no-repeat -327px -254px;
 	background-size: 444px 434px;
-	width: 8px;
+	width: 7px;
     height: 10px;
-    margin: auto;
 }
 .vibe_list img{
     width: 100%;
@@ -2475,6 +2476,9 @@ justify-content: space-between;
 .vibe_list .phrase span{
     font-size: 1.4rem;
     letter-spacing: -0.5px;
+}
+.vibe_list .phrase span:hover{
+    text-decoration: underline;
 }
 .widget_list .mobile::before{
     content: "";
@@ -2517,6 +2521,10 @@ justify-content: space-between;
     box-sizing: border-box;
     display: flex;
 }
+.whale p{
+    width: 350px;
+    cursor: pointer;
+}
 .whale .down,.whale .naver_app{
     display: none;
     flex-flow: column wrap;
@@ -2536,7 +2544,9 @@ justify-content: space-between;
     opacity: 1;
     pointer-events: all;
 }
-
+.whale p:hover{
+    text-decoration: underline;
+}
 .whale .down::before{
     content: "";
     display: flex;
@@ -2585,15 +2595,131 @@ justify-content: space-between;
 }
 .page_ad li+li{
     margin-left: 4px;}
-
-
 footer{
     background: #f5f6f8;
-    height: 300px;
+    height: 430px;
+    border-top: 1px solid #ebebeb;   
 }
-footer>div{
-     height: 100%;
+footer>section{
+    width: 1280px;
+    height: 100%;
+    margin: 0 auto;
 }
+.footer_ad{
+    padding-top:30px ;
+}
+.ad_list{
+    display: flex;
+}
+.ad_list li{
+    width: 410px;
+}
+.ad_list li+li{
+    margin-left: 20px;
+}
+.ad_list li a{
+    display: flex;
+}
+.ad_pic{
+    position: relative;
+    width: 160px;
+    height: 100px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-right: 18px;
+}
+.ad_pic.cj::after{
+    top: 3px;
+    right: 3px;
+    position: absolute;
+    content: "";
+    display: flex;
+    background: url(../img/ad_sprite.png) no-repeat -27px 0;
+	background-size: 52px 16px;
+	width: 25px;
+	height: 16px;
+}
+.ad_pic img{
+    width: 100%;
+    transition: .6s all ease 0s;
+}
+.ad_list li:hover .ad_pic img{
+    transform: scale(1.1);
+}
+.ad_info{
+    font-size: 14px;
+}
+.ad_info p span{
+    box-sizing: border-box;
+    padding-left: 1px;
+    padding-top: 1px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ad_list li:hover .title{
+    text-decoration: underline;
+}
+.ad_info>span{
+    display: block;
+    letter-spacing: -0.6px;
+}
+.ad_info>span+span{
+    margin-top: 2px;
+}
+.ad_info .title{
+    font-weight: bold;
+    letter-spacing: -0.7px;
+    margin: 10px 0 6px;
+}
+.ad_info .company{
+    margin-top: 5px;
+    font-size: 13px;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+    padding:0  5px ;
+    height: 20px;
+    border-radius: 5px;
+    display: inline-block;
+    background: #a0adb2;
+}
+footer .notice{
+    border-top: 1px solid #ebebeb;
+    border-bottom: 1px solid #ebebeb;
+    padding: 22px 0;
+    margin: 30px 0;
+}
+footer .notice div{
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+.service_all{
+    display: flex;
+    align-items: center;
+}
+.service_all::after{
+    content:"";
+    display: flex;
+    background: url(../img/sp_main.ae81c9d5.png) no-repeat -323px -223px;
+    background-size: 444px 434px;
+    width: 8px;
+    height: 12px;
+    margin-left: 11px;
+}
+
+
+
+
+
+
+
+
+
+
 
 /* IE9,10 */
 @media screen and (min-width:0\0){
@@ -2615,7 +2741,10 @@ margin: 0 auto;}
     display: flex;
     flex-flow: row wrap;
 }
-header,main,footer>div{
+footer{
+    width: 100%;
+}
+header,main,footer>section{
     width: 1730px;
     margin: 0  auto;
     box-sizing: border-box;
