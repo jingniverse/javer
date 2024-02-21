@@ -2442,14 +2442,27 @@ justify-content: space-between;
     overflow: hidden;
     margin-bottom: 10px;
 }
-.vibe_list .pic::after{
+
+.vibe_list .pic span{
     position: absolute;
+    border-radius: 50%;
+    width: 28px; 
+    height: 28px;
+    display: flex;
+    background: rgba(0, 0, 0, 0.5)  ;
+    right: 8px;
+    bottom: 8px;
+}
+.vibe_list .pic span::after{
     content: "";
     display: flex;
-    width: 28px; 
-    height: 29px;
-    background: rgba(0, 0, 0, 0.5) url();
-    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    background:url(../img/sp_main.ae81c9d5.png)no-repeat -327px -254px;
+	background-size: 444px 434px;
+	width: 8px;
+    height: 10px;
+    margin: auto;
 }
 .vibe_list img{
     width: 100%;
