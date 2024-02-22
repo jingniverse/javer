@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/font.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
     <title>javer</title>
 </head>
 <body>
@@ -17,7 +18,8 @@
                 <div>
                     <section>
                         <a href="#" class="menu_button">
-                            <span class="blind">바로가기메뉴</span>
+                            <span>바로가기</span>
+                            <p class="blind">바로가기메뉴</p>
                         </a>                    
                         <!-- <div class="hidden_nav open">
                             <p>바로가기</p>
@@ -73,15 +75,18 @@
                         </div> -->
                     </section>
                     <a href="#" class="n_pay">
-                        <span class="blind">네이버페이</span>
+                        <span>네이버페이</span>
+                        <p class="blind">네이버페이</sppan>
                     </a>
                 </div>
                 <div>
                     <a href="#" class="n_talk">
-                        <span class="blind">네이버톡톡</span>
+                        <span>네이버톡</span>
+                        <p class="blind">네이버톡톡</p>
                     </a>
                     <a href="#" class="n_notice">
-                        <span class="blind">알림</span>
+                        <span>알림<i></i> 혜택</span>
+                        <p class="blind">알림</p>
                     </a>
                 </div>
             </section>
@@ -144,8 +149,14 @@
                 <article class="main_news">
                     <div class="content_wrap">
                         <ul class="m_news_type">
-                            <li class="m_n_t_stand on"><a href="#">뉴스스탠드</a></li>
-                            <li class="m_n_t_edit"><a href="#">언론사편집</a></li>
+                            <li class="m_n_t_stand">
+                                <span>예전 PC와 동일한 방식으로 보기</span>
+                                <a href="#" class="on">뉴스스탠드</a>
+                            </li>
+                            <li class="m_n_t_edit">
+                                <span>모바일과 동일한 방식으로 보기</span>
+                                <a href="#">언론사편집</a>
+                            </li>
                             <li class="m_n_t_enter"><a href="#">엔터</a></li>
                             <li class="m_n_t_sports">
                                 <a href="#">스포츠</a>
@@ -356,7 +367,7 @@
                         <button class="prev_b"></button>
                         <span><b>언론사 </b>더보기 1<i>/4</i></span>
                         <button class="next_b"></button>
-                        <div>
+                        <div class="news_btn">
                             <button class="list_btn"><span class="blind">리스트형</span></button>
                             <button class="box_btn active"><span class="blind">박스형</span></button>
                         </div>
@@ -366,7 +377,7 @@
                     <div class="content_wrap">
                         <p class="blind">쇼핑컨텐츠</p>
                         <ul class="m_shop_type">
-                            <li class="m_s_t_shop on"><a href="#">쇼핑</a></li>
+                            <li class="m_s_t_shop "><a href="#" class="on">쇼핑</a></li>
                             <li class="m_s_t_man"><a href="#">맨즈</a></li>
                             <li class="m_s_t_deal"><a href="#">원쁠딜</a></li>
                             <li class="m_s_t_live"><a href="#">쇼핑라이브</a></li>
@@ -523,228 +534,383 @@
                 </article>
                 <article class="main_etc">
                     <ul class="content">
-                        <li class="best_sub"><a href="#"><span class="">추천</span><span>구독</span></a></li>
-                        <li class=""><a href="#"><span>자동차</span></a></li>
-                        <li class=""><a href="#"><span>웹툰</span></a></li>
-                        <li class=""><a href="#"><span>패션뷰티</span></a></li>
-                        <li class=""><a href="#"><span>레시피</span></a></li>
-                        <li class=""><a href="#"><span>리빙</span></a></li>
-                        <li class=""><a href="#"><span>책방</span></a></li>
-                        <li class=""><a href="#"><span>지식+</span></a></li>
-                        <li class=""><a href="#"><span>건강</span></a></li>
-                        <li class=""><a href="#"><span>게임</span></a></li>
+                        <li class="best_sub on"><a href="#"><span class="">추천</span><span>구독</span></a></li>
+                        <li class="car"><a href="#"><span>자동차</span></a></li>
+                        <li class="webtoon"><a href="#"><span>웹툰</span></a></li>
+                        <li class="beauty"><a href="#"><span>패션뷰티</span></a></li>
+                        <li class="recipe"><a href="#"><span>레시피</span></a></li>
+                        <li class="living"><a href="#"><span>리빙</span></a></li>
+                        <li class="bookstore"><a href="#"><span>책방</span></a></li>
+                        <li class="int"><a href="#"><span>지식+</span></a></li>
+                        <li class="health"><a href="#"><span>건강</span></a></li>
+                        <li class="game"><a href="#"><span>게임</span></a></li>
                     </ul>
-                    <!-- 추천구독 -->
-                    <article class="best_sub_content">
-                        <p class="blind">기타등등 컨텐츠</p>
-                        <div class="b_s_c_select">
-                            <ul class="b_s_c_category">
-                                <li class="all active"><a href="#">전체</a></li>
-                                <li class="famous"><a href="#">인기</a></li>
-                                <li class="animal"><a href="#">동물</a></li>
-                                <li class="trip"><a href="#">여행</a></li>
-                                <li class="marry"><a href="#">연애결혼</a></li>
-                                <li class="movie"><a href="#">영화</a></li>
-                                <li class="parenting"><a href="#">육아</a></li>
-                            </ul> 
-                            <a class="home">구독홈</a>
-                        </div>
-                        <div class="select_all">
-                            <ul class="all_list">
-                                <li class="job">
-                                    <a href="#">
-                                        <div>
-                                            <img src="./img/자격증.jpg" alt="">
-                                        </div>
-                                        <p>아이돌보미 자격증 주부자격증 추천이유</p>
-                                        <span>한국직업능력진흥원</span>
-                                    </a>
-                                </li>
-                                <li class="ohouse">
-                                    <a href="#">
-                                        <div>
-                                            <img src="./img/오늘의집.jpg" alt="">
-                                        </div>
-                                        <p>세상에.. 120년 된 폐가를 싹 뜯어 고쳤다고요!?</p>
-                                        <span>오늘의집</span>
-                                    </a>
-                                </li>
-                                <li class="somelab">
-                                    <a href="#">
-                                        <div>
-                                            <img src="./img/썸랩.jpg" alt="">
-                                        </div>
-                                        <p>백화점 직원과 손님으로 첫만남...만난 지 3시간 만에...</p>
-                                        <span>썸랩</span>
-                                    </a>
-                                </li>
-                                <li class="ohouse">
-                                    <a href="#">
-                                        <div><img src="./img/오늘의집3.jpg" alt=""></div>
-                                        <p>30살 구옥의 대변신! 요즘 부부는 '이렇게'리모델링 하...</p>
-                                        <span>오늘의집</span>
-                                    </li>
-                                    <li class="ddung">
-                                    </a>
-                                    <a href="#">
-                                        <div>
-                                            <img src="./img/뚱뚱보의기록.jpg" alt="">
-                                        </div>
-                                        <p>40대 엄마들의 겨울 동원룩 패션으로 고급미를 더한 코...</p>
-                                        <span>뚱뚱보의기록</span>
-                                    </a>
-                                </li>
-                                <li class="uquiz">
-                                    <a href="#">
-                                        <div>
-                                            <img src="./img/유퀴즈.jpg" alt="">
-                                        </div>
-                                        <p>조세호의 질문에 최민식 자기님이 입을 닫은 이유는...</p>
-                                        <span>유 퀴즈 온 더 블럭</span>
-                                    </a>
-                                </li>
-                                <li class="sunny">
-                                    <a href="#">
-                                        <div>
-                                            <img src="./img/써니엄마2.jpg" alt="">
-                                        </div>
-                                        <p>-20kg 박세미 다이어트 꿀팁 여자 남자 헬스 초보 루틴 ...</p>
-                                        <span>써니엄마</span>
-                                    </a>
-                                </li>
-                                <li class="maven">
-                                    <a href="#">
-                                        <div>
-                                            <img src="./img/메이븐.jpg" alt="">
-                                        </div>
-                                        <p>정신과 의사 "아무리 화나도 배우자에게 이말은 절대...</p>
-                                        <span>메이븐</span>
-                                    </a>
-                                </li>
-                                <li class="ye">
-                                    <a href="#">
-                                        <div>
-                                            <img src="./img/예뚱이.jpg" alt="">
-                                        </div>
-                                        <p>한소희 패션 속 아크네스류디오 끈나시원피스 가격은?</p>
-                                        <span>예뚱이</span>
-                                    </a>
-                                </li>
-                                <li class="ohgame">
-                                    <a href="#">
-                                        <div>
-                                            <img src="./img/오겜.jpg" alt="">
-                                        </div>
-                                        <p>첫 스틸 떳다! 오징어게임 시즌2 출연진,개봉일(넷...</p>
-                                        <span>장꼬꼬</span>
-                                    </a>
-                                </li>
-                                <li class="gcloset">
-                                    <a href="#">
-                                        <div>
-                                            <img src="./img/Gcloset2.png" alt="">
-                                        </div>
-                                        <p>20240209_분위기 있는 케이티 홈즈, 카멜코트 입고 뉴...</p>
-                                        <span>Gcloset</span>
-                                    </a>
-                                </li>
-                                <li class="audi">
-                                    <a href="#">
-                                        <div>
-                                            <img src="./img/audi.jpg" alt="">
-                                        </div>
-                                        <p>아우디 A7 과연 1억 넘는 가격을 주고 출고할 합당한...</p>
-                                        <span>흙맥</span>
-                                    </a>
-                                </li>
-                            </ul> 
-                            <ul class="short_video">
-                                <li class="s_v_title">
-                                    <span>매일 찾는 짧은 즐거움</span>
-                                    <ul class="s_v_list">
-                                        <li>
-                                            <a href="#">
-                                                <div>
-                                                    <img src="./img/Shorts1.jpg" alt="">
-                                                </div>
-                                                <p>전역 전날 특</p>
-                                                <span>효자손</span>
-                                            </a>
-                                        </li> 
-                                        <li>
-                                            <a href="#">
-                                                <div>
-                                                    <img src="./img/Shorts2.jpg" alt="">
-                                                </div>
-                                                <p>어머! 이 엄마 왜이래?</p>
-                                                <span>안코홈</span>
-                                            </a>
-                                        </li> 
-                                        <li>
-                                            <a href="#">
-                                                <div>
-                                                    <img src="./img/Shorts3.jpg" alt="">
-                                                </div>
-                                                <p>물병 세우기 대결ㅋㅋㅋㅋ</p>
-                                                <span>용용용 YYY</span>
-                                            </a>
-                                        </li> 
-                                        <li>
-                                            <a href="#">
-                                                <div>
-                                                    <img src="./img/Shorts4.jpg" alt="">
-                                                </div>
-                                                <p>떼쓰는 아기를 한번에 설득한...</p>
-                                                <span>슈로시안</span>
-                                            </a>
-                                        </li> 
-                                        <li>
-                                            <a href="#">
-                                                <div>
-                                                    <img src="./img/Shorts5.jpg" alt="">
-                                                </div>
-                                                <p>보름달이 비치는 호숫가 풍경 그...</p>
-                                                <span>세레나아트 sere...</span>
-                                            </a>
-                                        </li> 
-                                        <li>
-                                            <a href="#">
-                                                <div>
-                                                    <img src="./img/Shorts6.jpg" alt="">
-                                                </div>
-                                                <p>길 걷다가 본...<p>
-                                                <span>아뱅의 한다! 리뷰</span>
-                                            </a>
-                                        </li> 
-                                    </ul>
-                                </li>    
-                            </ul>
-                         </div>  
-                        <div class="more_view">
-                            <button>
-                                펼쳐보기
-                                <div>
-                                    <span class="material-symbols-outlined">
-                                        add
-                                    </span>
+                    <ul class="content_list">
+                        <li class="on">
+                            <!-- 추천구독 -->
+                            <article class="best_sub_content">
+                                <p class="blind">기타등등 컨텐츠</p>
+                                <div class="b_s_c_select">
+                                    <ul class="b_s_c_category">
+                                        <li class="all active"><a href="#">전체</a></li>
+                                        <li class="famous"><a href="#">인기</a></li>
+                                        <li class="animal"><a href="#">동물</a></li>
+                                        <li class="trip"><a href="#">여행</a></li>
+                                        <li class="marry"><a href="#">연애결혼</a></li>
+                                        <li class="movie"><a href="#">영화</a></li>
+                                        <li class="parenting"><a href="#">육아</a></li>
+                                    </ul> 
+                                    <a class="home">구독홈</a>
                                 </div>
-                            </button>
-                        </div>
-                        
-                    </article>
+                                <div class="select_all">
+                                    <ul class="all_list">
+                                        <li class="job">
+                                            <a href="#">
+                                                <div>
+                                                    <img src="./img/자격증.jpg" alt="">
+                                                </div>
+                                                <p>아이돌보미 자격증 주부자격증 추천이유</p>
+                                                <span>한국직업능력진흥원</span>
+                                            </a>
+                                        </li>
+                                        <li class="ohouse">
+                                            <a href="#">
+                                                <div>
+                                                    <img src="./img/오늘의집.jpg" alt="">
+                                                </div>
+                                                <p>세상에.. 120년 된 폐가를 싹 뜯어 고쳤다고요!?</p>
+                                                <span>오늘의집</span>
+                                            </a>
+                                        </li>
+                                        <li class="somelab">
+                                            <a href="#">
+                                                <div>
+                                                    <img src="./img/썸랩.jpg" alt="">
+                                                </div>
+                                                <p>백화점 직원과 손님으로 첫만남...만난 지 3시간 만에...</p>
+                                                <span>썸랩</span>
+                                            </a>
+                                        </li>
+                                        <li class="ohouse">
+                                            <a href="#">
+                                                <div><img src="./img/오늘의집3.jpg" alt=""></div>
+                                                <p>30살 구옥의 대변신! 요즘 부부는 '이렇게'리모델링 하...</p>
+                                                <span>오늘의집</span>
+                                            </li>
+                                            <li class="ddung">
+                                            </a>
+                                            <a href="#">
+                                                <div>
+                                                    <img src="./img/뚱뚱보의기록.jpg" alt="">
+                                                </div>
+                                                <p>40대 엄마들의 겨울 동원룩 패션으로 고급미를 더한 코...</p>
+                                                <span>뚱뚱보의기록</span>
+                                            </a>
+                                        </li>
+                                        <li class="uquiz">
+                                            <a href="#">
+                                                <div>
+                                                    <img src="./img/유퀴즈.jpg" alt="">
+                                                </div>
+                                                <p>조세호의 질문에 최민식 자기님이 입을 닫은 이유는...</p>
+                                                <span>유 퀴즈 온 더 블럭</span>
+                                            </a>
+                                        </li>
+                                        <li class="sunny">
+                                            <a href="#">
+                                                <div>
+                                                    <img src="./img/써니엄마2.jpg" alt="">
+                                                </div>
+                                                <p>-20kg 박세미 다이어트 꿀팁 여자 남자 헬스 초보 루틴 ...</p>
+                                                <span>써니엄마</span>
+                                            </a>
+                                        </li>
+                                        <li class="maven">
+                                            <a href="#">
+                                                <div>
+                                                    <img src="./img/메이븐.jpg" alt="">
+                                                </div>
+                                                <p>정신과 의사 "아무리 화나도 배우자에게 이말은 절대...</p>
+                                                <span>메이븐</span>
+                                            </a>
+                                        </li>
+                                        <li class="ye">
+                                            <a href="#">
+                                                <div>
+                                                    <img src="./img/예뚱이.jpg" alt="">
+                                                </div>
+                                                <p>한소희 패션 속 아크네스류디오 끈나시원피스 가격은?</p>
+                                                <span>예뚱이</span>
+                                            </a>
+                                        </li>
+                                        <li class="ohgame">
+                                            <a href="#">
+                                                <div>
+                                                    <img src="./img/오겜.jpg" alt="">
+                                                </div>
+                                                <p>첫 스틸 떳다! 오징어게임 시즌2 출연진,개봉일(넷...</p>
+                                                <span>장꼬꼬</span>
+                                            </a>
+                                        </li>
+                                        <li class="gcloset">
+                                            <a href="#">
+                                                <div>
+                                                    <img src="./img/Gcloset2.png" alt="">
+                                                </div>
+                                                <p>20240209_분위기 있는 케이티 홈즈, 카멜코트 입고 뉴...</p>
+                                                <span>Gcloset</span>
+                                            </a>
+                                        </li>
+                                        <li class="audi">
+                                            <a href="#">
+                                                <div>
+                                                    <img src="./img/audi.jpg" alt="">
+                                                </div>
+                                                <p>아우디 A7 과연 1억 넘는 가격을 주고 출고할 합당한...</p>
+                                                <span>흙맥</span>
+                                            </a>
+                                        </li>
+                                    </ul> 
+                                    <ul class="short_video">
+                                        <li class="s_v_title">
+                                            <span>매일 찾는 짧은 즐거움</span>
+                                            <ul class="s_v_list">
+                                                <li>
+                                                    <a href="#">
+                                                        <div>
+                                                            <img src="./img/Shorts1.jpg" alt="">
+                                                        </div>
+                                                        <p>전역 전날 특</p>
+                                                        <span>효자손</span>
+                                                    </a>
+                                                </li> 
+                                                <li>
+                                                    <a href="#">
+                                                        <div>
+                                                            <img src="./img/Shorts2.jpg" alt="">
+                                                        </div>
+                                                        <p>어머! 이 엄마 왜이래?</p>
+                                                        <span>안코홈</span>
+                                                    </a>
+                                                </li> 
+                                                <li>
+                                                    <a href="#">
+                                                        <div>
+                                                            <img src="./img/Shorts3.jpg" alt="">
+                                                        </div>
+                                                        <p>물병 세우기 대결ㅋㅋㅋㅋ</p>
+                                                        <span>용용용 YYY</span>
+                                                    </a>
+                                                </li> 
+                                                <li>
+                                                    <a href="#">
+                                                        <div>
+                                                            <img src="./img/Shorts4.jpg" alt="">
+                                                        </div>
+                                                        <p>떼쓰는 아기를 한번에 설득한...</p>
+                                                        <span>슈로시안</span>
+                                                    </a>
+                                                </li> 
+                                                <li>
+                                                    <a href="#">
+                                                        <div>
+                                                            <img src="./img/Shorts5.jpg" alt="">
+                                                        </div>
+                                                        <p>보름달이 비치는 호숫가 풍경 그...</p>
+                                                        <span>세레나아트 sere...</span>
+                                                    </a>
+                                                </li> 
+                                                <li>
+                                                    <a href="#">
+                                                        <div>
+                                                            <img src="./img/Shorts6.jpg" alt="">
+                                                        </div>
+                                                        <p>길 걷다가 본...<p>
+                                                        <span>아뱅의 한다! 리뷰</span>
+                                                    </a>
+                                                </li> 
+                                            </ul>
+                                        </li>    
+                                    </ul>
+                                </div>  
+                                <div class="more_view">
+                                    <button>
+                                        펼쳐보기
+                                        <div>
+                                            <span class="material-symbols-outlined">
+                                                add
+                                            </span>
+                                        </div>
+                                    </button>
+                                </div>
+                                
+                            </article>
                     <!-- 추천구독 끝 -->
-                    <!-- 자동차 -->
-                    <article></article>
-                    <!-- 자동차 끝 -->
-                    <!-- 웹툰 -->
-                    <article></article>
-                    <!-- 웹툰 끝 -->
-                    <!-- 패션뷰티 -->
-                    <article></article>
-                    <!-- 패션뷰티 끝 -->
-                    <!-- 레시피-->
-                    <article></article>
-                    <!-- 레시피 끝 -->
+                        </li>
+                        <li>                            
+                            <!-- 자동차 -->
+                            <article>
+                                <div class="car_content_wrap">
+                                    <ul class="car_content">
+                                        <li class="jeep">
+                                            <a href="#">
+                                                <div class="pic">
+                                                    <img src="./img/car_ad1.jpg" alt="">
+                                                </div>
+                                                <span class="ad">네이버 자동차</span>
+                                                <p>지프 시승신청</p>
+                                                <span>시승 가능한 모델을 버튼으로 확인하세요!</span>
+                                            </a>
+                                        </li>
+                                        <li class="maserati">
+                                            <a href="#">
+                                                <div class="pic">
+                                                    <img src="./img/car_ad2.jpg" alt="">
+                                                </div>
+                                                <span class="ad">네이버 마이카</span>
+                                                <p>마세라티 시승신청</p>
+                                                <span>시승 가능한 모델을 버튼으로 확인하세요!</span>
+                                             </a>
+                                        </li>
+                                        <li class="peugeot">
+                                            <a href="#">
+                                                <div class="pic">
+                                                    <img src="./img/car_ad3.jpg" alt="">
+                                                </div>
+                                                <span class="ad">네이버 자동차</span>
+                                                <p>푸조 시승신청</p>
+                                                <span>시승 가능한 모델을 버튼으로 확인하세요!</span>
+                                            </a>
+                                        </li>
+                                        <li class="byd">
+                                            <a href="#">
+                                                <div class="pic">
+                                                    <img src="./img/car_ad4.jpg" alt="">
+                                                </div>
+                                                <span class="ad">네이버 자동차</span>
+                                                <p>BYD 시승신청</p>
+                                                <span>시승 가능한 모델을 버튼으로 확인하세요!</span>
+                                            </a>
+                                        </li>
+                                        <li class="mycar">
+                                            <a href="#">
+                                                <div class="pic">
+                                                    <img src="./img/car_ad5.jpg" alt="">
+                                                </div>
+                                                <span class="ad">네이버 마이카</span>
+                                                <p></p>
+                                                <span>이제 외울 필요 없어요!</span>
+                                                <span>시승 가능한 모델을 버튼으로 확인하세요!</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <ul class="car_review">
+                                        <li>
+                                            <a href="#">
+                                                <div class="pic">
+                                                    <img src="./img/car_list1.jpg" alt="">
+                                                </div>
+                                                <p>차번호만 입력하면 내 차의 남은 무상 A/S기간을 바로 확인!</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="pic">
+                                                    <img src="./img/car_list2.jpg" alt="">
+                                                </div>
+                                                <p>젊음이여,떠날 준비 됐는가 '포드브롱코'</p>
+                                                <span class="auto">오토얼라인먼트</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="pic">
+                                                    <img src="./img/car_list3.jpg" alt="">
+                                                </div>
+                                                <p></p>
+                                                <span class="motor"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="pic">
+                                                    <img src="./img/car_list4.jpg" alt="">
+                                                </div>
+                                                <p></p>
+                                                <span class="m_r"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="pic">
+                                                    <img src="./img/car_list5.jpg" alt="">
+                                                </div>
+                                                <p></p>
+                                                <span class="car_re"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="pic">
+                                                    <img src="./img/car_list6.jpg" alt="">
+                                                </div>
+                                                <p></p>
+                                                <span class="herald"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="pic">
+                                                    <img src="./img/car_list7.jpg" alt="">
+                                                </div>
+                                                <p></p>
+                                                <span class="the_eye"></span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="pic">
+                                                    <img src="./img/car_list8.jpg" alt="">
+                                                </div>
+                                                <p></p>
+                                                <span class="a_isu"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="more_view">
+                                    <button>
+                                        펼쳐보기
+                                        <div>
+                                            <span class="material-symbols-outlined">
+                                                add
+                                            </span>
+                                        </div>
+                                    </button>
+                                </div>
+                            </article>
+                            <!-- 자동차 끝 -->
+                        </li>
+                        <li>                            
+                            <!-- 웹툰 -->
+                            <article></article>
+                            <!-- 웹툰 끝 -->
+                        </li>
+                        <li>                        
+                            <!-- 패션뷰티 -->
+                            <article></article>
+                            <!-- 패션뷰티 끝 -->
+                        </li>
+                        <li>                        
+                            <!-- 레시피-->
+                            <article></article>
+                            <!-- 레시피 끝 -->
+                        </li>
+                    </ul>
+                    
+                    
                 </article>
             </section>
             <section class="right_content">
@@ -970,14 +1136,20 @@
                     </div>
                     <div class="whale">
                         <p class="blind">살펴보기</p>
-                        <p class="down on">
-                            <span class="title">나만의 스마트한 브라우저, 웨일</span>
-                            <span>인터넷을 여는 가장 스마트한 방법</span>
-                        </p>
-                        <p class="naver_app">
-                            <span class="title">이제, 네이버앱에서 탭하세요!</span>
-                            <span>새로워진 네이버앱 살펴보기</span>
-                        </p>
+                        <ul>
+                            <li>
+                                <p class="down on">
+                                    <span class="title">나만의 스마트한 브라우저, 웨일</span>
+                                    <span>인터넷을 여는 가장 스마트한 방법</span>
+                                </p>
+                            </li>
+                            <li>
+                                <p class="naver_app">
+                                    <span class="title">이제, 네이버앱에서 탭하세요!</span>
+                                    <span>새로워진 네이버앱 살펴보기</span>
+                                </p>
+                            </li>
+                        </ul>    
                         <ul class="page_ad">
                             <li class="on"></li>
                             <li></li>
