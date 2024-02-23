@@ -64,7 +64,13 @@ $(document).ready(function(){
     });
 
 
-
+    $(window).scroll(function () {
+        var sct = $(window).scrollTop();
+        
+        if(sct>20){$('header').addClass('on')}
+        if(sct<10){$('header').removeClass('on')}
+        console.log(sct);
+    })
 
 
 
