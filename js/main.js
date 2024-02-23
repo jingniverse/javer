@@ -49,14 +49,11 @@ $(document).ready(function(){
     })
 
     $(".content>li").click(function() {
-        // 선택된 요소에 대한 인덱스를 가져옵니다.
         let etc_li = $(this).index();
-        
-        // 첫 번째 ul의 li에 on 클래스를 설정합니다.
+
         $(".content>li").removeClass("on");
         $(this).addClass("on");
 
-        // 두 번째 ul의 li에 클래스를 설정하거나 제거합니다.
         $(".content_list>li").each(function(i) {
             if (i === etc_li) {
                 $(this).addClass("on");

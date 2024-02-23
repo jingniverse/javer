@@ -19,6 +19,9 @@ header{
     flex-flow: column;
     padding: 0px 0 27px;
 }
+main{
+    margin-bottom: 59px;
+}
 /* 서치 바 */
 form{    
     display: flex;    
@@ -471,6 +474,7 @@ input::-webkit-search-decoration,input::-webkit-search-cancel-button,input::-web
     background-size: 444px 434px;
     transform: translate(-50%,-50%);    
     -moz-transform: translate(18%,44%);
+    
 }
 .short_cut_menu .mail_icon a::after{
     background-position:-254px -94px;
@@ -1200,7 +1204,7 @@ align-items: center;
     height: 560px;
 }
 .main_shopping .content_wrap{
-    padding:19px 20px 1px
+    padding:19px 20px 4px
 }
 .main_shopping a:hover{
     text-decoration: underline;
@@ -1321,7 +1325,7 @@ align-items: center;
     display: flex;
     flex-flow: row wrap;
     width: 522px;
-    height: 375px;
+    height: 372px;
     margin-right: 19px;
 }
 .goods_list a div{
@@ -1520,7 +1524,7 @@ align-items: center;
     margin-top: 16px;
     width: 830px;
     box-sizing: border-box;
-    margin-bottom: 59px;
+    /* margin-bottom: 59px; */
 }
 .main_etc .content{
     display: flex;
@@ -1782,12 +1786,10 @@ align-items: center;
 .car_content_wrap{
     width: 790px;
     overflow: hidden;
-    padding: 20px 20px 25px;
+    padding: 20px 20px 0;
 }
 .car_content{
     display: flex;
-    border-bottom: 1px solid #ebebeb;
-    padding-bottom: 44px;
 }             
 .car_content li{
     letter-spacing: -0.45px;
@@ -1804,6 +1806,10 @@ align-items: center;
     width: 100%;
     height: 100%;
     object-fit: contain;
+    transition: .6s all ease 0s;
+}
+.car_content li:hover img{
+    transform: scale(1.05);
 }
 .car_content li+li{
     margin-left: 20px;
@@ -1838,64 +1844,145 @@ align-items: center;
     color:#606060 ;
     border: 1px solid #ebebeb;
 }
-
+.review_wrap{
+    border-top: 1px solid #ebebeb;
+    margin: 44px 20px 9px;
+    padding: 24px 0 0;
+}
 .car_review{
-    padding:0 20px;
     display: flex;
     flex-flow: wrap;
     justify-content: space-between;
+    padding-right: 1px;
 }
 .car_review li{
     margin-bottom: 16px ;
 }
 .car_review li a{
-    height: 98px;
     display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
+    /* align-items: center; */
 }
 .car_review p{
-    letter-spacing: -0.3px;
+    letter-spacing: -0.4px;
     width: 210px ;
+    line-height: 21px;
+    margin-top: 17px;
+}
+.car_review .as  p{
+    letter-spacing: -0.4px;
+    margin-top: 29px;
+}
+.car_review .car_re p{
+    margin-top: 29px;
 }
 .car_review span{
+    font-size: 1.3rem;
     display: flex;
-    margin-top: 6px;
+    margin-top: 4px;
+    align-items: center;
+    line-height: 20px;
+    letter-spacing: -0.5px;
 }
 .car_review span::before{
     content: "";
     border-radius: 50%;
-    width: 19px;
-    height: 19px;
+    width: 20px;
+    height: 20px;
     display: flex;
     margin-right: 6px;
-    border: 1px solid #ebebeb;
+    align-items: center;
+    justify-content: 
+    center;
+    box-sizing: border-box;
+    border: 1px solid 
+    #ebebeb;
 }
-.car_review .auto::before{
+.car_review .auto span::before{
     background: url(../img/car_list2_icon.jpg);
+    background-size: 19px; 
+}
+.car_review .motor span::before{
+    background: url(../img/car_list3_icon.jpg);
+    background-size: 19px; 
+}
+.car_review .m_r span::before{
+    background: url(../img/car_list4_icon.jpg);
+    background-size: 19px; 
+}
+.car_review .car_re span::before{
+    background: url(../img/car_list5_icon.jpg);
+    background-size: 19px; 
+}
+.car_review .herald span::before{
+    background: url(../img/car_list6_icon.jpg);
+    background-size: 19px; 
+}
+.car_review .the_eye span::before{
+    background: url(../img/car_list7_icon.jpg);
+    background-size: 19px; 
+}
+.car_review .a_isu span::before{
+    background: url(../img/car_list8_icon.jpg);
     background-size: 19px; 
 }
 
 .car_review li .pic{
-    width: 152px;
-    height: 98px;
-    border: 1px solid #ebebeb;
+    position: relative;
+    width: 154px; 
+    height: 100px;
     border-radius: 4px; 
     margin-right: 16px ;
+    overflow: hidden;
+}
+.car_review li .pic::after{
+    content: "";
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    border: 1px solid rgba(0,0,0,.06);
+    border-radius: 4px; 
+   box-sizing: border-box;
+
 }
 .car_review li img{
     width: 100%;
     height: 100%;
+    transition: .6s all ease 0s;
 }
-
-
-
-
-
-
-
-
-
+.car_review li:hover img{
+    transform:scale(1.1);
+}
+.motor p i{
+display: inline-block;
+width: 3px;
+height: 3px;
+background: #d3d5d7;
+margin: auto 4px;
+vertical-align: middle;
+}
+.webtoon_wrap{
+    padding: 20px;
+}
+.w_home{
+font-size: 1.4rem;
+height: 50px;
+background: #f5f7f8;
+display: flex;
+padding:17px 20px;
+box-sizing: border-box;
+margin: 19px 20px 18px ;
+justify-content: space-between;
+border-radius: 4px;
+}
+.w_home>li{
+    display: flex ;
+}
+.w_home ul{
+    display: flex;
+}
 
 
 
