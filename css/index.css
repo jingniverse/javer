@@ -2327,6 +2327,7 @@ letter-spacing:-0.4px;
     padding: 17px 0 0;
     display: flex;
     transition: 1s all ease 0s;
+    margin-bottom: 4px;
 }
 .e_s_list li{
     width: 108px;
@@ -2366,10 +2367,9 @@ letter-spacing:-0.4px;
     height: 100%;
 }
 .e_s_list p{
-    display: inline-block;
     line-height: 20px;
     letter-spacing: -0.5px;
-    margin: 10px 0 6px;
+    margin: 9px 0 4px;
     font-size: 1.4rem;
 }
 .e_s_list span{
@@ -2379,12 +2379,14 @@ letter-spacing:-0.4px;
 }
 .e_s_list p:before{
     content: "";
+    position: relative;
+    top:3px;
     display: inline-block;
     background: url(../img/sp_main.ae81c9d5.png)no-repeat -166px -280px;
 	background-size: 444px 434px;
 	width: 25px;
 	height: 17px;
-    margin-right: 3px;
+    margin-right: 4px;
 
 }
 
@@ -2425,6 +2427,9 @@ letter-spacing:-0.4px;
 }
 .more_view .material-symbols-outlined{
     color: #5290ff;
+}
+.webtoon .more_view{
+    padding-top: 1px;
 }
 .webtoon .more_view .material-symbols-outlined{
     color: #00d564;
