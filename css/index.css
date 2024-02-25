@@ -1529,7 +1529,7 @@ align-items: center;
 }
 .main_etc .content{
     display: flex;
-    padding: 20px 21px 0;
+    padding: 21px 21px 0;
 
 }
 .main_etc .content li{
@@ -1707,6 +1707,10 @@ align-items: center;
     background: url(../img/유퀴즈\ \(2\).jpg);
     background-size: 20px;
 }
+.all_list .sunny span::before{
+    background: url(../img/써니엄마.png);
+    background-size: 20px;
+}
 .all_list .maven span::before{
     background: url(../img/메이븐2.jpg);
     background-size: 20px;
@@ -1787,7 +1791,7 @@ align-items: center;
 .car_content_wrap{
     width: 790px;
     overflow: hidden;
-    padding: 20px 20px 0;
+    padding: 19px 20px 0;
 }
 .car_content{
     display: flex;
@@ -1965,31 +1969,307 @@ margin: auto 4px;
 vertical-align: middle;
 }
 .webtoon_wrap{
-    padding: 20px;
+    padding: 0 20px;
 }
 .w_home{
 font-size: 1.4rem;
 height: 50px;
 background: #f5f7f8;
 display: flex;
-padding:17px 20px;
+padding:20px 20px 17px;
 box-sizing: border-box;
-margin: 19px 20px 18px ;
-justify-content: space-between;
+margin: 19px 0px 18px ;
 border-radius: 4px;
+align-items: center;
+letter-spacing:-0.4px;
 }
 .w_home>li{
     display: flex ;
+    align-items:center;
+}
+.w_home>li+li::before{
+    content: "";
+    width: 1px;
+    height: 12px;
+    display: flex;
+    background: #d3d4d6;
+    margin: 0 11px 2px 12px;
+}
+.w_home>li>a{
+    font-weight: bold;
 }
 .w_home ul{
     display: flex;
 }
+.w_h_list li{
+    display: flex;
+    align-items: center;
+}
+.w_h_list li::before{
+    content: "";
+    display: flex;
+    justify-content: center;
+width: 3px;
+height: 3px;
+vertical-align: middle;
+background: #d3d5d7;
+margin: 0 7px 1px 8px;
+}
+.webtoon_day{
+    margin-top: 2px;
+    font-size: 1.5rem;
+    display: flex;
+    padding: 2px 20px 0;
+    justify-content: space-between;
+}
+.webtoon_day p{
+    font-weight: bold;
+}
+.webtoon_day a{
+    font-size: 1.3rem;
+    color: #606060;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.4px;
+}
 
+.webtoon_day a::after{
+    content: "";
+    display: flex;
+    background: url(../img/sp_main.ae81c9d5.png)  -10px -423px;
+	background-size: 444px 434px;
+	width: 7px;
+	height: 10px;
+    align-items: center;
+    margin-left: 6px;
+    margin-right: 1px;
+}
+.w_d_list{
+    padding: 17px 20px 0;
+    display: flex;
+    flex-flow: wrap;
+}
+.w_d_list li{
+    width: 108px;
+    margin-bottom: 20px;
+}
 
+.w_d_list li+li{
+    margin-left: 28px;
+}
+.w_d_list li:nth-of-type(6n+2),.w_d_list li:nth-of-type(6n+5){
+    width: 109px;
+}
+.w_d_list li:nth-of-type(6n+1){
+    margin-left: 0;
+}
+.w_d_list .pic{
+    width: 108px;
+    height: 140px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.w_d_list img{
+    width: 100%;
+    height: 100%;
+}
+.w_d_list p{
+    line-height: 20px;
+    letter-spacing: -0.5px;
+    margin: 10px 0 6px;
+    font-size: 1.4rem;
+}
+.w_d_list span{
+    letter-spacing: -0.4px;
+    font-size: 1.3rem;
+    color: #8d8d8d;
+}
+.webtoon_ad{
+    position: relative;
+    font-size: 14px;
+height: 50px;
+background: #f5f7f8;
+display: flex;
+padding:8px 0px 8px;
+box-sizing: border-box;
+margin: 5px 20px 20px ;
+border-radius: 4px;
+align-items: center;
+letter-spacing:-0.4px;
+}
+.ad_close{
+    position: absolute;
+    display: inline-block;
+    background: url('../img/ad_sprite2.png') no-repeat 0 -20px;
+	background-size: 100px 90px;
+	width: 42px;
+	height: 16px;
+    top: 3px;
+    right: 3px;
+    border: 0;
+    cursor: pointer;
+}
 
+.webtoon_ad .ad{
+    display: flex;
+    align-items: center;
+}
+.webtoon_ad.on .ad,
+.webtoon_ad .close{
+    display: none;
+}
+.webtoon_ad.on .close{
+    height: 50px;
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    justify-content: 
+    center;
+    align-items:center;
+    width: 100%;
+    font-size: 10px;
+    background: #f5f7fd;
+}
+.webtoon_ad.on .close::after{
+    content: "";
+    display: flex;
+    background: url(../img/ad_sprite2.png)  no-repeat no-repeat -21px -73px;
+	background-size: 100px 90px;
+	width: 38px;
+	height: 7px;
+    position: absolute;
+    top: 6px;
+    right: 6px;
+}
+.webtoon_ad.on .close div{
+    display: flex;
+}
 
+.webtoon_ad .close p{
+    margin: 0;
+    font-weight: normal;
+}
+.yes{
+    margin-right: 7px;
+}
+.yes,.no{
+    z-index: 3;
+    cursor: pointer;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    width: 145px;
+    height: 18px;
+    border: 1px solid #ebebeb;
+    border-radius: 4px;
+    background: white;
+    box-sizing:border-box;
+}
+.yes:hover,.no:hover{
+    border: 1px solid #4393ff;
+    background: #4393ff;
+    color: white;
+}
 
+.webtoon_ad .ad span{
+    padding-top: 1px;
+}
+.webtoon_ad p{
+    align-items: center;
+    display: flex;
+    font-weight: bold;
+    margin-right: 8px;
+}
+.webtoon_ad .ad p::before{
+    content: "";
+    background: url(../img/web_ad.jpg);
+    width: 51px;
+    height: 34px;
+    border-radius: 4px;
+    display: flex;
+    background-size: 51px 34px;
+    margin-left: 125px;
+    margin-right: 18px;
+}
+.webtoon_ad .buy{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+.webtoon_ad .buy::after{
+    content: "";
+    display: flex;
+    background: url(../img/sp_main.2b26eb67.png)-425px -90px;
+    background-size: 434px 416px;
+    width: 7px;
+    height: 10px;;
+    align-items: center;
+    margin-left: 5px;
+}
+.w_w_head{
+    padding: 0 20px;
+    display: flex;
+}
+.w_w_head p{
+    font-weight: bold;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    letter-spacing: -.4px;
+}
+.w_w_head p::after{
+    content: "";
+    width: 1px;
+    height: 12px;
+    display: flex;
+    margin: 0 12px;
+    background: #d3d4d6;
+}
+.w_d_list b{
+    font-weight: bold;
+    margin-right: 7px;
+}
+.w_w_head .new {
+    margin-right: 10px;
+}
+.w_w_head .new:hover,.w_w_head .end:hover{
+    text-decoration:underline;
+}
+.w_w_head .new,.w_w_head .end{
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    border-radius: 14px;
+    align-items: center;
+    box-sizing: border-box;
+    padding-top: 1px;
+}
+.w_w_head .new.on,.w_w_head .end.on{
+    background: #00d564;
+    color: white;
+    width: 49px;
+}
 
+.w_d_list.week{
+    padding-top: 12px;}
+.w_d_list.week .writer{
+    display: flex;
+    color: #00d564;
+    margin-top: 4px;
+}
+.weeks_n_e{
+    position: relative;
+}
+.weeks_n_e .end,
+.weeks_n_e .new{
+    display:none
+} 
+ .weeks_n_e .new.on,
+.weeks_n_e .end.on{
+    display: flex;
+}
+.w_w_head_list{display: flex;}
 .more_view{
     border-top:1px solid #ebebeb;
     display: flex;
@@ -1997,6 +2277,132 @@ border-radius: 4px;
     align-items: center;
     height: 55px;
 }
+.edition_s{
+    overflow: hidden;
+    width: 818px;
+    margin: 4px 20px 0;
+    border-top: 1px solid #ebebeb;
+}
+.edition_s>p{
+    margin-top: 25px;
+    font-weight: bold ;
+    font-size: 1.5rem;
+    letter-spacing: -.4px;
+}
+.e_s{
+    position: relative;
+}
+.e_s .prev,.e_s .next{
+    position: absolute;
+    top: 29%;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+    border: 1px solid #ebebeb;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    background: white;
+}
+.e_s .prev{
+    left: -12px;
+    transform: rotate(180deg)
+}
+.e_s .next{
+    top:36%;
+    right: -4px;
+}
+.e_s .prev::after,.e_s .next::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: url(../img/sp_main.2b26eb67.png)-425px -90px;
+    background-size: 434px 416px;
+    width: 7px;
+    height: 10px;
+    transform: translate(-50%,-50%)
+}
+.e_s_list{
+    width: 3272px;
+    padding: 17px 0 0;
+    display: flex;
+    transition: 1s all ease 0s;
+}
+.e_s_list li{
+    width: 108px;
+    margin-bottom: 20px;
+}
+
+.e_s_list li:nth-of-type(6n+2),.e_s_list li:nth-of-type(6n+5){
+    width: 109px;
+}
+.e_s_list li:nth-of-type(6n+2) .pic,.e_s_list li:nth-of-type(6n+5) .pic{
+    width: 109px;
+}
+.e_s_list li+li{
+    margin-left: 28px;
+}
+.e_s_list .pic{
+    position: relative;
+    width: 108px;
+    height: 156px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.e_s_list .pic::after{
+    position: absolute;
+    content: "";
+    display: inline-block;
+    background: url(../img/sp_main.ae81c9d5.png) no-repeat -295px -111px;
+	background-size: 444px 434px;
+	width: 32px;
+	height: 32px;
+    bottom: 0;
+    right: 0;
+}
+
+.e_s_list img{
+    width: 100%;
+    height: 100%;
+}
+.e_s_list p{
+    display: inline-block;
+    line-height: 20px;
+    letter-spacing: -0.5px;
+    margin: 10px 0 6px;
+    font-size: 1.4rem;
+}
+.e_s_list span{
+    letter-spacing: -0.4px;
+    font-size: 1.3rem;
+    color: #8d8d8d;
+}
+.e_s_list p:before{
+    content: "";
+    display: inline-block;
+    background: url(../img/sp_main.ae81c9d5.png)no-repeat -166px -280px;
+	background-size: 444px 434px;
+	width: 25px;
+	height: 17px;
+    margin-right: 3px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .more_view button{
@@ -2019,6 +2425,9 @@ border-radius: 4px;
 }
 .more_view .material-symbols-outlined{
     color: #5290ff;
+}
+.webtoon .more_view .material-symbols-outlined{
+    color: #00d564;
 }
 /* .more_view button::after{
     content: "";
@@ -2519,6 +2928,7 @@ justify-content: space-between;
     cursor: pointer;
 }
 .widget{
+    margin-top: 15px;
     width: 420px;
     height: 805px;
     padding: 18px 17px 23px;
