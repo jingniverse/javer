@@ -2624,7 +2624,7 @@ letter-spacing:-0.4px;
 }
 .review_wrap{
     border-top: 1px solid #ebebeb;
-    margin: 25px 20px 9px;
+    margin: 25px 20px 8px;
     padding: 24px 0 0;
 }
 .r_review{
@@ -2741,9 +2741,57 @@ letter-spacing:-0.4px;
     letter-spacing: -0.4px;
     margin-top: 28px;
 }
+.recipe_theme{
+width: 790px;
+position: relative;
+margin: 4px 20px 0;
+border-top: 1px solid #ebebeb;
+}
+.recipe_theme>p{
+    margin: 25px 0 17px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: -.4px;
+}
+.r_t_list{
+    display: flex;
+    transition: .5s all ease 0s;
+} 
+.r_t_list li:nth-of-type(2n+1){
+    width: 183px;
+}
+.r_t_list li+li{
+    margin-left: 20px;
+}
+
+.r_t_list .pic{
+    border-radius: 4px;
+    overflow: hidden;
+    width: 182px;
+    height: 120px;
+    margin-bottom: 12px;
+}
+.r_t_list img{
+    width: 100%;
+    height: 100%;
+    transition: .4s all ease 0s;
+}
+.r_t_list img:hover{
+    transform: scale(1.05);
+}
+.r_t_list li .title{
+color: #f0b200;
+}
 
 
 
+
+.r_t_list p{
+    font-size: 1.4rem;
+}
+.r_t_list li span{
+    font-size: 1.3rem;
+}
 
 
 
@@ -2875,6 +2923,7 @@ letter-spacing:-0.4px;
 .main_weather,.main_stock{
     width: 420px;
     height: 236px;
+    background: white;
 }
 .main_weather{
     box-sizing: border-box;
@@ -3650,6 +3699,7 @@ justify-content: space-between;
     padding:20px 18px 0;
     box-sizing: border-box;
     display: flex;
+    background: white;
 }
 .whale p{
     width: 350px;
