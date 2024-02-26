@@ -95,21 +95,84 @@ $(document).on("click", ".webtoon_ad.on .close", function(){
 
 
 let count = 0
-$(".e_s .next").click(function(){
+$(".edition_s .next").click(function(){
+    
     count++
     if(count>3){count=0}
-    // 기차칸 li태그가 전부 선택되서 on클래스가 지워지고
-    // 순번에 맞는 기차칸 li태그만 on클래스가 추가가 되면 됨
     $(".e_s_list").css("transform",`translateX(${(-25*count)}%)`)
-   
+    if(count==3){
+        $(".edition_s .next").hide()
+     }else {
+     $(".edition_s .next").show()
+    }
+    if (count === 0) {
+        $(".edition_s .prev").hide();
+    } else {
+        $(".edition_s .prev").show();
+    }
 })
-$(".e_s .prev").click(function(){
+$(".edition_s .prev").click(function(){
     count--
     if(count<0){count=3}
     $(".e_s_list").css("transform",`translateX(${(-25*count)}%)`)
-
+    if(count==0){
+        $(".edition_s .prev").hide()
+     }else{
+     $(".edition_s .prev").show()
+    }
+    if(count==3){
+        $(".edition_s .next").hide()
+     }else {
+     $(".edition_s .next").show()
+    }
+    
 })
+$(document).ready(function() {
+    $(".edition_s .prev").hide(); 
+});
 
+$(".car_content_wrap .next").click(function(){
+    
+    count++
+    if(count>1){count=0}
+    $(".car_content").css("transform",`translateX(-69%)`)
+    if(count==1){
+        $(".car_content_wrap .next").hide()
+     }else {
+     $(".car_content_wrap .next").show()
+    }
+    if (count === 0) {
+        $(".car_content_wrap .prev").hide();
+    } else {
+        $(".car_content_wrap .prev").show();
+    }
+})
+$(".car_content_wrap .prev").click(function(){
+    count--
+    if(count<0){count=1}
+    $(".car_content").css("transform",`translateX(0%)`)
+    if(count==0){
+        $(".car_content_wrap .prev").hide()
+     }else{
+     $(".car_content_wrap .prev").show()
+    }
+    if(count==1){
+        $(".car_content_wrap .next").hide()
+     }else {
+     $(".car_content_wrap .next").show()
+    }
+    
+})
+$(document).ready(function() {
+    $(".car_content_wrap .prev").hide(); 
+});
+
+// $(".edition_s .next").click(function(){
+
+// })
+// $(".edition_s .prev").click(function(){
+
+// })
 
     // $(window).scroll(function () {
     //     var sct = $(window).scrollTop();

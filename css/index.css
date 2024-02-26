@@ -1792,9 +1792,49 @@ align-items: center;
     width: 790px;
     overflow: hidden;
     padding: 19px 20px 0;
+    position: relative;
 }
+.car_content_wrap .station{
+    width: 790px;
+    overflow: hidden;
+}
+.car_content_wrap .prev,
+.car_content_wrap .next{
+    position: absolute;
+    top: 38%;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+    border: 1px solid #ebebeb;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    background: white;
+}
+.car_content_wrap .next{
+    top: 47%;
+    right: -10px;
+}
+.car_content_wrap .prev{
+    left: 8px;
+    top: 40%;
+    transform: rotate(180deg);
+}
+.car_content_wrap .prev::after,
+.car_content_wrap .next::after{
+    content: "";
+    position: absolute;
+    top:50%;
+    left: 50%;
+    background: url(../img/sp_main.2b26eb67.png)-425px -90px;
+    background-size: 434px 416px;
+    width: 7px;
+    height: 10px;
+    transform: translate(-50%,-50%);
+}
+
 .car_content{
     display: flex;
+    transition: 1s all ease 0s;
 }             
 .car_content li{
     letter-spacing: -0.45px;
@@ -1995,6 +2035,9 @@ letter-spacing:-0.4px;
     background: #d3d4d6;
     margin: 0 11px 2px 12px;
 }
+.w_home>li:hover>a:hover{
+    text-decoration: underline;
+}
 .w_home>li>a{
     font-weight: bold;
 }
@@ -2004,6 +2047,9 @@ letter-spacing:-0.4px;
 .w_h_list li{
     display: flex;
     align-items: center;
+}
+.w_h_list li:hover a{
+    text-decoration: underline;
 }
 .w_h_list li::before{
     content: "";
@@ -2031,6 +2077,9 @@ margin: 0 7px 1px 8px;
     display: flex;
     align-items: center;
     letter-spacing: -0.4px;
+}
+.webtoon_day a:hover span{
+    text-decoration: underline;
 }
 
 .webtoon_day a::after{
@@ -2072,12 +2121,19 @@ margin: 0 7px 1px 8px;
 .w_d_list img{
     width: 100%;
     height: 100%;
+    transition: .4s all ease 0s;
+}
+.w_d_list img:hover{
+    transform: scale(1.05);
 }
 .w_d_list p{
     line-height: 20px;
     letter-spacing: -0.5px;
     margin: 10px 0 6px;
     font-size: 1.4rem;
+}
+.w_d_list li a:hover p{
+    text-decoration: underline;
 }
 .w_d_list span{
     letter-spacing: -0.4px;
@@ -2277,9 +2333,13 @@ letter-spacing:-0.4px;
     align-items: center;
     height: 55px;
 }
-.edition_s{
+/* .edition_s_wrap{
+    width: 790px;
     overflow: hidden;
-    width: 818px;
+} */
+.edition_s{
+    width: 790px;
+    position: relative;
     margin: 4px 20px 0;
     border-top: 1px solid #ebebeb;
 }
@@ -2290,11 +2350,13 @@ letter-spacing:-0.4px;
     letter-spacing: -.4px;
 }
 .e_s{
+    width: 790px;
+    overflow: hidden;
     position: relative;
 }
-.e_s .prev,.e_s .next{
+.edition_s .prev,.edition_s .next{
     position: absolute;
-    top: 29%;
+    top: 38%;
     transform: translate(-50%,-50%);
     cursor: pointer;
     border: 1px solid #ebebeb;
@@ -2303,15 +2365,15 @@ letter-spacing:-0.4px;
     height: 36px;
     background: white;
 }
-.e_s .prev{
+.edition_s .prev{
     left: -12px;
     transform: rotate(180deg)
 }
-.e_s .next{
-    top:36%;
-    right: -4px;
+.edition_s .next{
+    top:44%;
+    right: -30px;
 }
-.e_s .prev::after,.e_s .next::after{
+.edition_s .prev::after,.edition_s .next::after{
     content: "";
     position: absolute;
     top: 50%;
@@ -2326,7 +2388,7 @@ letter-spacing:-0.4px;
     width: 3272px;
     padding: 17px 0 0;
     display: flex;
-    transition: 1s all ease 0s;
+    transition:.5s all ease 0s;
     margin-bottom: 4px;
 }
 .e_s_list li{
@@ -2365,6 +2427,10 @@ letter-spacing:-0.4px;
 .e_s_list img{
     width: 100%;
     height: 100%;
+    transition: .4s all ease 0s;
+}
+.e_s_list img:hover{
+    transform: scale(1.05);
 }
 .e_s_list p{
     line-height: 20px;
@@ -2387,7 +2453,102 @@ letter-spacing:-0.4px;
 	width: 25px;
 	height: 17px;
     margin-right: 4px;
+}
+.e_s_list .not:before{
+    display: none;
+}
 
+.beauty_list{
+    display: flex;
+    flex-flow: wrap;
+    padding: 19px 20px 4px;
+}
+.beauty_list li+li{
+    margin-left: 20px;
+}
+.beauty_list li{
+    width: 183px;
+    letter-spacing: -.5px;
+}
+.beauty_list li:nth-of-type(2n){
+    width: 182px;
+}
+.beauty_list li:nth-of-type(4n+1){
+    margin-left: 0;
+}
+
+.beauty_list .pic{
+    width: 183px;
+    height: 120px;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.beauty_list img:hover{
+    transform: scale(1.05);
+}
+.beauty_list img{
+    transition: .6s all ease 0s;
+    width: 100%;
+    height: 100%;
+}
+.beauty_list p{
+    font-size: 1.4rem;
+    margin: 10px 0 4px;
+    line-height: 20px;
+}
+.beauty_list li span{
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+    color: #606060;
+    margin-bottom: 18px;
+}
+.beauty_list li span:before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    border: 1px solid #f0f0f0;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+
+}
+.beauty_list .u_il span::before{
+    background: url(../img/유일리.jpg);
+    background-size: 20px;
+}
+.beauty_list .ddo span::before{
+    background: url(../img/또또룩2.png);
+    background-size: 20px;
+}
+.beauty_list .kim_il span::before{
+    background: url(../img/김일미2.jpg);
+    background-size: 20px;
+}
+.beauty_list .miz span::before{
+    background: url(../img/미즈옹2.jpg);
+    background-size: 20px;
+}
+.beauty_list .seona span::before{
+    background: url(../img/서나2.jpg);
+    background-size: 20px;
+}
+.beauty_list .snee span::before{
+    background: url(../img/스니커마니아2.jpg);
+    background-size: 20px;
+}
+.beauty_list .alo span::before{
+    background: url(../img/알리디아2.jpg);
+    background-size: 20px;
+}
+.beauty_list .beau_may span::before{
+    background: url(../img/뷰티메이2.jpg);
+    background-size: 20px;
+}
+.beauty_list .i_lin span::before{
+    background: url(../img/아이린토2.jpg);
+    background-size: 20px;
 }
 
 
@@ -2395,9 +2556,191 @@ letter-spacing:-0.4px;
 
 
 
+.recipe
 
+.recipe_wrap{
+    width: 790px;
+    overflow: hidden;
+    padding: 19px 20px 0;
+}
+.r_content{
+    display: flex;
+}             
+.r_content li{
+    letter-spacing: -0.45px;
+}
+.r_content li .pic{
+    position: relative;
+    width: 250px;
+    height: 144px;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.r_content li .pic::after {
+    content: "";
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    border: 1px solid rgba(0,0,0,.06);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.r_content li .info{
+    display: flex;
+    flex-flow: column;
+}
+.r_content li img{
+    width: 100%;
+    height: 100%;
+    transition: .6s all ease 0s;
+}
+.r_content li:hover img{
+    transform: scale(1.05);
+}
+.r_content li+li{
+    margin-left: 20px;
+}
+.r_content li span{
+    font-size: 1.3rem;
+}
+.r_content li span:last-of-type{
+    margin-top: 2px;
+}
+.r_content li p{
+    font-weight: bold;
+    margin: 5px 0 6px;
+    font-size: 1.4rem;
+}
+.r_content li .title{
+    color: #f0b200;
+    font-weight: bold;
+    display: flex;
+    font-size: 1.3rem;
+    line-height: 2rem;
+}
+.review_wrap{
+    border-top: 1px solid #ebebeb;
+    margin: 25px 20px 9px;
+    padding: 24px 0 0;
+}
+.r_review{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    padding-right: 1px;
+}
+.r_review li{
+    margin-bottom: 16px ;
+}
+.r_review li a{
+    display: flex;
+    /* align-items: center; */
+}
+.r_review p{
+    letter-spacing: -0.4px;
+    width: 210px ;
+    line-height: 21px;
+    margin-top: 17px;
+}
+.r_review .as  p{
+    letter-spacing: -0.4px;
+    margin-top: 29px;
+}
+.r_review .car_re p{
+    margin-top: 29px;
+}
+.r_review span{
+    font-size: 1.3rem;
+    display: flex;
+    margin-top: 4px;
+    align-items: center;
+    line-height: 20px;
+    letter-spacing: -0.5px;
+}
+.r_review span::before{
+    content: "";
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    margin-right: 6px;
+    align-items: center;
+    justify-content: 
+    center;
+    box-sizing: border-box;
+    border: 1px solid 
+    #ebebeb;
+}
+.r_review li .pic{
+    position: relative;
+    width: 154px; 
+    height: 100px;
+    border-radius: 4px; 
+    margin-right: 16px ;
+    overflow: hidden;
+}
+.r_review li .pic::after{
+    content: "";
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    border: 1px solid rgba(0,0,0,.06);
+    border-radius: 4px; 
+   box-sizing: border-box;
 
+}
+.r_review li img{
+    width: 100%;
+    height: 100%;
+    transition: .6s all ease 0s;
+}
+.r_review li:hover img{
+    transform:scale(1.1);
+}
 
+.r_review .m_1 span::before{
+    background: url(../img/m_icon1.jpg);
+    background-size: 19px; 
+}
+.r_review .m_2 span::before{
+    background: url(../img/m_icon2.jpg);
+    background-size: 19px; 
+}
+.r_review .m_3 span::before{
+    background: url(../img/m_icon3.jpg);
+    background-size: 19px; 
+}
+.r_review .m_4 span::before{
+    background: url(../img/m_icon4.jpg);
+    background-size: 19px; 
+}
+.r_review .m_5 span::before{
+    background: url(../img/m_icon5.jpg);
+    background-size: 19px; 
+}
+.r_review .m_6 span::before{
+    background: url(../img/m_icon6.jpg);
+    background-size: 19px; 
+}
+.r_review .m_7 span::before{
+    background: url(../img/m_icon7.jpg);
+    background-size: 19px; 
+}
+.r_review .m_8 span::before{
+    background: url(../img/m_icon8.png);
+    background-size: 19px; 
+}
+.r_review .m_8  p{
+    letter-spacing: -0.4px;
+    margin-top: 28px;
+}
 
 
 
@@ -2428,6 +2771,7 @@ letter-spacing:-0.4px;
 .more_view .material-symbols-outlined{
     color: #5290ff;
 }
+.beauty .more_view,
 .webtoon .more_view{
     padding-top: 1px;
 }
