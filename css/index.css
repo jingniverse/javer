@@ -764,6 +764,10 @@ main .left_content>*{
 .m_news_type li:hover a{
     text-decoration: underline;
 }
+.m_news_type li:hover a span{
+    text-decoration-line: underline;
+    text-decoration-color:#f4361e;
+}
 /* .m_news_type li:hover a.on:hover p:hover{ 
     text-decoration: none !important;
 } */
@@ -898,16 +902,7 @@ main .left_content>*{
     font-size: 1.1rem;
     color: white;
     margin-left:7px;
-    text-decoration: none;
 }
-.m_news_type li:hover a:hover .live_badge {
-    text-decoration: none;
-}
-.m_news_type li:hover a .live_badge {
-    text-decoration: none;
-}
-
-
 .live_badge::before{
     content: "";
     display: inline-block;
@@ -916,18 +911,6 @@ main .left_content>*{
     background: url('../img/sp_main.2b26eb67.png') no-repeat -118px -117px;
 	background-size: 434px 416px;
     margin-right: 4px;
-    text-decoration: none;
-}
-.live_badge:hover::before{
-    text-decoration: none;
-
-}
-
-.main_news .m_news_type .m_n_t_sports a:hover .live_badge:hover{ 
-    text-decoration: none;
-}
-.m_n_t_sports a:hover .live_badge:hover{ 
-    text-decoration: none;
 }
 .m_news_type .m_n_t_ad{
     display: flex;
@@ -1111,7 +1094,7 @@ align-items: center;
 }
 .m_n_hidden_button{
     width: 100%;
-    height: 55px;
+    height: 56px;
     display: none;
     justify-content: center;
     align-items: center;
@@ -1121,9 +1104,14 @@ align-items: center;
     top: -1px;
     left: 0;
 }
+.m_n_hidden_button a+a{
+    display: flex;
+    align-items: center;
+}
 .m_n_hidden_button a+a::before{
     content: "";
-    display: inline-block;
+    display: flex;
+    align-items: center;
     margin: 0 10px;
     width: 1px;
     height: 12px;
@@ -1643,8 +1631,12 @@ align-items: center;
 }
 .b_s_c_category li:hover{
     background: #f1f1f1 ;
-    border:1px solid #5290ff;
 }
+.b_s_c_category .famous,
+.b_s_c_category .all{
+    border:1px solid #5292ff4c;
+    
+} 
 .b_s_c_category li.active{
     font-weight: bold;
     background: #5290ff ;
@@ -1659,16 +1651,28 @@ align-items: center;
     flex-flow: wrap;
     box-sizing: border-box;
 }
+.all_list.more{
+    border-top: 1px solid #ebebeb;
+    padding-top: 24px;
+    display: none;
+}
+.all_list.more.active{
+    display: flex;
+}
+
 .all_list li{
     width: 183px;
     height: 195px;
 }
+.all_list li:nth-of-type(2n){
+    width: 182px;
+}
 .all_list li:nth-of-type(4n+1){
     margin-left: 0;
-    margin-bottom: 20px;
+    margin-bottom: 19px;
 }
 .all_list li+li{
-    margin-left: 19px;
+    margin-left: 20px;
 
 }
 .all_list li div{
@@ -1677,12 +1681,16 @@ align-items: center;
     height: 120px;
     overflow: hidden;
 }
+.all_list li:nth-of-type(2n) div{
+    width: 182px;
+}
 .all_list li:hover p{
     text-decoration: underline;
 }
 .all_list li p{
-    margin: 13px 0 7px;
+    margin: 10px 0 3px;
     letter-spacing: -0.5px;
+    line-height: 20px;
 }
 .all_list li img{
     width: 100%;
@@ -1752,16 +1760,17 @@ align-items: center;
     background: url(../img/audi2.png);
     background-size: 20px;
 }
-
 .short_video{
+    margin-top: 4px;
     padding-top: 25px;
     border-top:1px solid #ebebeb ;
 }
-
 .s_v_title>span{
     display: inline-block;
-    margin-bottom: 20px;
+    margin-bottom: 17px;
     font-weight: bold;
+    font-size: 1.5rem;
+    letter-spacing: -.4px;
 }
 .s_v_list{
     display: flex;
@@ -1798,7 +1807,7 @@ align-items: center;
     text-decoration: underline;
 }
 .s_v_list p{
-    margin: 8px 0;
+    margin: 10px 0 6px;
     font-size: 1.4rem;
     letter-spacing: -0.5px;
     line-height: 20px;
@@ -2756,7 +2765,7 @@ letter-spacing:-0.4px;
 .recipe_theme{
 width: 790px;
 position: relative;
-margin: 4px 20px 0;
+margin: 4px 20px 24px;
 border-top: 1px solid #ebebeb;
 }
 .recipe_theme>p{
@@ -2765,11 +2774,47 @@ border-top: 1px solid #ebebeb;
     font-weight: bold;
     letter-spacing: -.4px;
 }
+.r_t_wrap{
+    width: 790px;
+    overflow: hidden;
+}
+.recipe_theme .prev,.recipe_theme .next{
+    position: absolute;
+    top: 38%;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+    border: 1px solid #ebebeb;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    background: white;
+}
+.recipe_theme .prev{
+    left: -12px;
+    transform: rotate(180deg)
+}
+.recipe_theme .next{
+    top:44%;
+    right: -30px;
+}
+.recipe_theme .prev::after,.recipe_theme .next::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: url(../img/sp_main.2b26eb67.png)-425px -90px;
+    background-size: 434px 416px;
+    width: 7px;
+    height: 10px;
+    transform: translate(-50%,-50%)
+}
 .r_t_list{
+    width: 4050px;
     display: flex;
     transition: .5s all ease 0s;
 } 
 .r_t_list li{
+    flex: none;
     letter-spacing: -.4px;
     line-height: 20px;
 }
@@ -2801,6 +2846,7 @@ color: #f0b200;
 .r_t_list p{
     margin: 4px 0 ;
     font-size: 1.4rem;
+    width: 182px;
 }
 .r_t_list li span{
     font-size: 1.3rem;
@@ -2926,6 +2972,9 @@ color: #f0b200;
 .beauty .more_view,
 .webtoon .more_view{
     padding-top: 1px;
+}
+.recipe .more_view{
+    padding-bottom: 1px;
 }
 .webtoon .more_view .material-symbols-outlined{
     color: #00d564;
@@ -4012,8 +4061,11 @@ footer .notice div{
     font-weight: bold;
     width: 96px ;
     letter-spacing: -0.4px;
-
 }
+.whale_b,.n_company{
+    display: flex;
+}
+
 .partners+.developers{
     margin-top: 12px;
 }
@@ -4042,43 +4094,44 @@ footer .notice div{
     width: 303px;
     justify-content: space-between;
     font-size: 1.3rem;
-    height: 49px
+    height: 49px;
+    letter-spacing: -.4px;
 }
-.c_service a{
-    letter-spacing: -0.4px;
+.whale_b>div,.n_company>div{
     display: flex;
-    flex-flow: column wrap;
-    height: 48px;
-    justify-content: flex-start;
-
+    flex-flow: column;
 }
 .c_service .whale_b{
     /* letter-spacing: -1.2px; */
 }
-.c_service a::after{
-    content: ""; 
-    display: flex;
-    width: 48px;
-    height: 48px;
+.c_service>a{
     margin-left: 12px;
 }    
 .c_service p{
     font-weight: bold;
     margin-top: 5px;
 }
-.c_service span{
-    padding-top: 5px;
+.c_service .baro{
+   margin-top: 6px;
 }
 .c_service span:hover{
     text-decoration: underline;
 }
-.c_service .whale_b::after{
-    background: url(../img/whale.png);
+.c_service .whale_b>a{
+    background: url(../img/whale.png)no-repeat;
     background-size: 48px;
+    display: flex;
+    width: 48px;
+    height: 48px;
+    margin-left: 11px;
 }
-.c_service .n_company::after{
+.c_service .n_company>a{
      background: url(../img/black_naver.png);
     background-size: 48px;
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    margin-left: 11px;
  }
  .last_of_last{
     display: flex;

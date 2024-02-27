@@ -168,7 +168,43 @@ $(".car_content_wrap .prev").click(function(){
     
 })
 $(document).ready(function() {
-    $(".car_content_wrap .prev").hide(); 
+    $(".recipe_theme .prev").hide(); 
+});
+
+$(".recipe_theme .next").click(function(){
+    
+    count++
+    if(count>4){count=0}
+    $(".r_t_list").css("transform",`translateX(${(-20*count)}%)`)
+    if(count==4){
+        $(".recipe_theme .next").hide()
+     }else {
+     $(".recipe_theme .next").show()
+    }
+    if (count === 0) {
+        $(".recipe_theme .prev").hide();
+    } else {
+        $(".recipe_theme .prev").show();
+    }
+})
+$(".recipe_theme .prev").click(function(){
+    count--
+    if(count<0){count=4}
+    $(".r_t_list").css("transform",`translateX(${(-20*count)}%)`)
+    if(count==0){
+        $(".recipe_theme .prev").hide()
+     }else{
+     $(".recipe_theme .prev").show()
+    }
+    if(count==4){
+        $(".recipe_theme .next").hide()
+     }else {
+     $(".recipe_theme .next").show()
+    }
+    
+})
+$(document).ready(function() {
+    $(".recipe_theme .prev").hide(); 
 });
 
 // $(".edition_s .next").click(function(){
@@ -186,7 +222,13 @@ $(document).ready(function() {
     //     console.log(sct);
     // })
 
+    $(".best_sub_content .more_view").click(function(){
+        $('.all_list.more').addClass("active")
+    })
 
+    $(".main_etc>.content>li>a").click(function(){
+        $('.all_list.more').removeClass("active")
+    })
 
     $(".b_s_c_category>li").click(function(){
         $(".b_s_c_category>li").removeClass('active')
