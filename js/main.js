@@ -10,7 +10,6 @@ $(document).ready(function(){
             da=false
         }
     })
-
     $(".m_news_type>li>a").click(function(e){
         e.preventDefault()
     })
@@ -23,8 +22,8 @@ $(document).ready(function(){
     $(".b_s_c_category>li>a").click(function(e){
         e.preventDefault()
     })
-
-
+    
+  
 
     $(".m_news_type>li>a").click(function(){
         $(".m_news_type>li>a").removeClass('on')
@@ -53,7 +52,12 @@ $(document).ready(function(){
         e.preventDefault()
 
     })
-   
+    $( ".m_news_type>li>span" ).click(function(){
+
+        $( ".m_news_type>li>a").removeClass('on')
+        $(this).addClass('on')
+ 
+    })
 
     $(".w_w_head_list>li").click(function(e) {
         let w_t = $(this).index();
