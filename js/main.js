@@ -59,12 +59,32 @@ $(document).ready(function(){
         $(this).addClass("on")
 
     })
-    $(".w_w_head>a").click(function(e){
-        $(".w_w_head>a").removeClass('on')
+  
+    // $(".w_w_head>a").click(function(e){
+    //     $(".w_w_head>a").removeClass('on')
+    //     $(this).addClass("on")
+    //     e.preventDefault()
+
+    // })
+
+    $(".week_webtoon .w_w_head>a").click(function(e){
+        $(".week_webtoon .w_w_head>a").removeClass('on')
         $(this).addClass("on")
         e.preventDefault()
-
     })
+    $(".most_webtoon .w_w_head>a").click(function(e){
+        $(".most_webtoon .w_w_head>a").removeClass('on')
+        $(this).addClass("on")
+        e.preventDefault()
+    })
+    $(".week_novel .w_w_head>a").click(function(e){
+        $(".week_novel .w_w_head>a").removeClass('on')
+        $(this).addClass("on")
+        e.preventDefault()
+    })
+
+
+
     $( ".m_news_type>li>span" ).click(function(){
 
         $( ".m_news_type>li>a").removeClass('on')
@@ -72,14 +92,51 @@ $(document).ready(function(){
  
     })
 
-    $(".w_w_head_list>li").click(function(e) {
+
+
+
+
+
+    $(".week_webtoon .w_w_head_list>li").click(function(e) {
         let w_t = $(this).index();
         e.preventDefault()
 
-        $(".w_w_head_list>li").removeClass("on");
+        $(".week_webtoon .w_w_head_list>li").removeClass("on");
         $(this).addClass("on");
 
-        $(".weeks_n_e>li").each(function(i) {
+        $(".week_webtoon .weeks_n_e>li").each(function(i) {
+            if (i === w_t) {
+                $(this).addClass("on");
+            } else {
+                $(this).removeClass("on");
+            }
+        });
+    });
+    
+    $(".most_webtoon .w_w_head_list>li").click(function(e) {
+        let w_t = $(this).index();
+        e.preventDefault()
+
+        $(".most_webtoon .w_w_head_list>li").removeClass("on");
+        $(this).addClass("on");
+
+        $(".most_webtoon .weeks_n_e>li").each(function(i) {
+            if (i === w_t) {
+                $(this).addClass("on");
+            } else {
+                $(this).removeClass("on");
+            }
+        });
+    });
+
+    $(".week_novel .w_w_head_list>li").click(function(e) {
+        let w_t = $(this).index();
+        e.preventDefault()
+
+        $(".week_novel .w_w_head_list>li").removeClass("on");
+        $(this).addClass("on");
+
+        $(".week_novel .weeks_n_e>li").each(function(i) {
             if (i === w_t) {
                 $(this).addClass("on");
             } else {
@@ -220,7 +277,7 @@ $(document).ready(function() {
     $(".recipe_theme .prev").hide(); 
 });
 
-$(".m_news_arrow .next_b").click(function(){
+$(".main_news .m_news_arrow .next_b").click(function(){
     count++
     if(count>3){count=0}
     // 기차칸 li태그가 전부 선택되서 on클래스가 지워지고
@@ -228,17 +285,17 @@ $(".m_news_arrow .next_b").click(function(){
     $(".m_news_wrap>li").removeClass("on")
     $(".m_news_wrap>li").eq(count).addClass("on")
 })
-$(".m_news_arrow .prev_b").click(function(){
+$(".main_news .m_news_arrow .prev_b").click(function(){
     count--
     if(count<0){count=3}
     $(".m_news_wrap>li").removeClass("on")
     $(".m_news_wrap>li").eq(count).addClass("on")
 })
-$(".m_news_arrow .next_b").click(function(){
-    $(".m_news_arrow .page_c").html(count+1)
+$(".main_news .m_news_arrow .next_b").click(function(){
+    $(".main_news .m_news_arrow .page_c").html(count+1)
 })
-$(".m_news_arrow .prev_b").click(function(){
-    $(".m_news_arrow .page_c").html(count+1)
+$(".main_news .m_news_arrow .prev_b").click(function(){
+    $(".main_news .m_news_arrow .page_c").html(count+1)
 })
 
 
@@ -275,6 +332,13 @@ $(".m_news_arrow .prev_b").click(function(){
 
     $(".main_etc>.content>li>a").click(function(){
         $('.all_list.more').removeClass("active")
+    })
+    $(".car .more_view").click(function(){
+        $('.review_wrap.more').addClass("active")
+    })
+
+    $(".main_etc>.content>li>a").click(function(){
+        $('.review_wrap.more').removeClass("active")
     })
 
     $(".b_s_c_category>li").click(function(){

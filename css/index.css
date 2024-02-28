@@ -1132,7 +1132,7 @@ align-items: center;
     border-right: 0px;
 }
 
-.m_news_arrow, .m_shop_arrow{
+.m_news_arrow{
     height: 57px;
     font-size: 1.3rem;
     border-top: 1px solid #ebebeb;
@@ -1143,21 +1143,21 @@ align-items: center;
     padding: 9px 0 11px;
     position: relative;
 }
-.m_news_arrow span,.m_shop_arrow span{
+.m_news_arrow span{
     margin:0 12px 0 24px;
     letter-spacing: -0.3px;
     padding-right: 12px;
     font-weight: bold;
 }
-.m_news_arrow .page_c,.m_shop_arrow .page_c{
+.m_news_arrow .page_c{
     color: black;
 }
-.m_news_arrow i, .m_shop_arrow i{color: rgba(96,96,96,.5);}
-.m_news_arrow b, .m_shop_arrow b{
+.m_news_arrow i{color: rgba(96,96,96,.5);}
+.m_news_arrow b{
     font-weight: 600;
     color: #4768bb;}
 .prev_b{transform: rotate(180deg);}
-.m_news_arrow>div,.m_shop_arrow>div{
+.m_news_arrow>div{
     position: absolute;
     width: 57px;
     right: 20px;
@@ -1325,7 +1325,6 @@ align-items: center;
 .m_shop_arrow span i{
     color: #aaaaaa ;
 }
-.m_shop_arrow span i{}
 .m_shop_arrow .prev_b{
     border-radius:0 5px 5px 0;
     margin-left: 9px;   
@@ -1535,7 +1534,7 @@ align-items: center;
     justify-content: center;
     line-height: 17px;
 }
-.main_shopping .m_news_arrow span,.m_shop_arrow span{
+.main_shopping .m_news_arrow span{
     margin: 0 14px 0 16px;
     padding-right: 4px;
 }
@@ -1831,7 +1830,7 @@ align-items: center;
 .car_content_wrap{
     width: 790px;
     overflow: hidden;
-    padding: 19px 20px 0;
+    padding: 19px 20px 19px;
     position: relative;
 }
 .car_content_wrap .station{
@@ -1929,11 +1928,7 @@ align-items: center;
     color:#606060 ;
     border: 1px solid #ebebeb;
 }
-.review_wrap{
-    border-top: 1px solid #ebebeb;
-    margin: 44px 20px 9px;
-    padding: 24px 0 0;
-}
+
 .car_review{
     display: flex;
     flex-flow: wrap;
@@ -2048,6 +2043,61 @@ background: #d3d5d7;
 margin: auto 4px;
 vertical-align: middle;
 }
+.owner{
+    border-bottom: 1px solid #ebebeb;
+    margin-bottom: 24px;
+    letter-spacing: -.4px;
+}
+.owner .title{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin: 1px 0 18px;
+    font-size: 1.5rem;
+
+}
+.owner .title .eval{
+    font-weight: normal;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    color: #606060;
+}
+.owner .title .eval::after{
+    content: "";
+    display: flex;
+    background: url(../img/sp_main.ae81c9d5.png)no-repeat -434px -220px;
+	background-size: 444px 434px;
+	width: 8px;
+	height: 12px;
+    align-items: center;
+    margin-left: 5px;
+}
+.owner_list{
+    display: flex;
+}
+.owner_list p{
+    margin: 12px 0 24px;
+}
+.owner_list li+li{
+    margin-left: 20px;
+}
+.owner_list .pic{
+    width: 183px;
+    height: 120px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.owner_list .pic:nth-of-type(2n){
+    width: 182px;
+}
+.owner_list .pic img{
+    width: 100%;
+}
+
+
+
 .webtoon_wrap{
     padding: 0 20px;
 }
@@ -2483,7 +2533,9 @@ letter-spacing:-0.4px;
     font-size: 1.3rem;
     color: #8d8d8d;
 }
-.e_s_list p:before{
+.t_n_list p:before,
+.e_s_list p:before,
+.best_l_list p:before{
     content: "";
     position: relative;
     top:3px;
@@ -2494,9 +2546,236 @@ letter-spacing:-0.4px;
 	height: 17px;
     margin-right: 4px;
 }
+.best_l_list .not:before,
 .e_s_list .not:before{
     display: none;
 }
+.web_toon_more{
+    margin:0 20px;
+}
+.web_toon_more .w_d_list.week{
+    padding: 12px 0 5px;
+}
+.web_toon_more .most_webtoon .w_d_list.week{
+    padding: 12px 0 4px;
+}
+.web_toon_more .w_w_head{
+    padding: 20px 0 0;
+}
+.web_toon_more .most_webtoon .w_w_head{
+    padding: 20px 0 0;
+}
+.week_novel,.most_webtoon{
+    border-top: 1px solid #ebebeb;
+}
+
+.w_d_list.week i{
+    display: inline-block;
+    justify-content: center;
+    width: 3px;
+    height: 3px;
+    margin: 0 6px 3px;
+    vertical-align: middle;
+    background: #d3d5d7;
+}
+.web_toon_more .w_d_list .pic{
+    height: 156px;
+}
+.web_toon_now{
+    border-top: 1px solid #ebebeb;
+    padding: 24px 0 4px
+}
+.t_n_list{
+    display: flex;
+    flex-flow: wrap;
+    width: 790px;
+    letter-spacing: -.4px;
+}
+
+.t_n_list li:nth-of-type(2n) .pic{
+    width: 182px;
+}
+.t_n_list li:nth-of-type(2n){
+    width: 182px;
+}
+.t_n_list li:nth-of-type(4n+1){
+    margin-left: 0;
+}
+.t_n_list li{
+    width: 183px;
+    margin-bottom: 20px;
+}
+.t_n_list li+li{
+    margin-left: 20px;
+}
+.t_n_list li .pic{
+    border-radius: 4px;
+    height: 120px;
+    overflow: hidden;
+    position: relative;
+}
+.t_n_list li .pic::before{
+    content: "";
+    position: absolute;
+    display: inline-block;
+    top: 4px;
+    left: 4px;
+    width: 24px;
+    height: 24px;
+    background:url(../img/sp_main.ae81c9d5.png)-364px -237px;
+	background-size: 444px 434px;
+}
+.t_n_list li .pic::after{
+    content: "";
+    display: block;
+    position: absolute;
+    border: 1px solid rgba(0,0,0,.06);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+.t_n_list li img{
+    width: 100%;
+    transition: .6s all ease 0s;
+}
+.t_n_list li:hover img{
+    transform: scale(1.05);
+}
+.t_n_list li p{
+    line-height: 20px;
+    font-size: 1.4rem;
+    margin: 9px 0 6px;
+}
+.t_n_list li span{
+    font-size: 1.3rem;
+}
+.t_n_list li span+span::before{
+    content: "";
+    display: inline-block;
+    justify-content: center;
+    width: 3px;
+    height: 3px;
+    margin: 0 6px 4px;
+    vertical-align: middle;
+    background: #d3d5d7;
+}
+.best_league{
+    border-top: 1px solid #ebebeb;
+    padding-top: 25px;
+    letter-spacing: -.4px;
+}
+.best_l_list_wrap{
+    width: 790px;
+    position: relative;
+    /* overflow: hidden; */
+}
+.best_l_list_wrap .prev{
+    transform: rotate(180deg);
+    left:-12px;
+}
+.best_l_list_wrap .next{
+    right: -12px;
+}
+
+.best_l_list_wrap .prev,
+.best_l_list_wrap .next{
+    cursor: pointer;
+    border: 1px solid #ebebeb;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    background: white;
+    top: 20%;
+  
+}
+.best_l_list_wrap .prev::after,
+.best_l_list_wrap .next::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: url(../img/sp_main.2b26eb67.png) -425px -90px;
+    background-size: 434px 416px;
+    width: 7px;
+    height: 10px;
+    transform: translate(-50%, -50%);
+}
+
+.best_l_list{
+    display: flex;
+}
+.best_l_list li+li{
+    margin-left: 20px;
+}
+.best_l_list .pic{
+    width: 115px;
+    height: 115px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.best_l_list img{
+    width: 100%;
+    transition: .6s all ease 0s;
+}
+.best_l_list li:hover img{
+    transform: scale(1.05);
+}
+.best_league>p{
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 17px;
+}
+.best_league>p>span{
+    display: flex;
+    align-items: center;
+    color: #606060;
+}
+.best_league>p>span::after{
+    content: "";
+    display: flex;
+    align-items: center;
+    background: url(../img/sp_main.ae81c9d5.png) -10px -423px;
+    background-size: 444px 434px;
+    width: 7px;
+    height: 10px;
+    align-items: center;
+    margin-left: 6px;
+    margin-right: 1px;
+}
+
+.best_l_list p{
+    margin: 9px 0 6px;
+    line-height: 20px;
+    font-size: 1.4rem;
+}
+.best_l_list span{
+    font-size: 1.3rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .beauty_list{
     display: flex;
@@ -2659,6 +2938,14 @@ letter-spacing:-0.4px;
     margin: 25px 20px 8px;
     padding: 24px 0 0;
 }
+.review_wrap.more{
+    margin-top: 8px;
+    display: none;
+}
+.review_wrap.more.active{
+    display: block;
+}
+
 .r_review{
     display: flex;
     flex-flow: wrap;
@@ -2984,6 +3271,7 @@ color: #f0b200;
 .webtoon .more_view{
     padding-top: 1px;
 }
+.car .more_view,
 .recipe .more_view{
     padding-bottom: 1px;
 }
