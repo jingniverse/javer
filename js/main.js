@@ -25,6 +25,19 @@ $(document).ready(function(){
     
   
 
+
+
+
+
+
+
+
+
+
+
+
+
+
     $(".m_news_type>li>a").click(function(){
         $(".m_news_type>li>a").removeClass('on')
         $(this).addClass("on")
@@ -206,6 +219,40 @@ $(".recipe_theme .prev").click(function(){
 $(document).ready(function() {
     $(".recipe_theme .prev").hide(); 
 });
+
+$(".m_news_arrow .next_b").click(function(){
+    count++
+    if(count>3){count=0}
+    // 기차칸 li태그가 전부 선택되서 on클래스가 지워지고
+    // 순번에 맞는 기차칸 li태그만 on클래스가 추가가 되면 됨
+    $(".m_news_wrap>li").removeClass("on")
+    $(".m_news_wrap>li").eq(count).addClass("on")
+})
+$(".m_news_arrow .prev_b").click(function(){
+    count--
+    if(count<0){count=3}
+    $(".m_news_wrap>li").removeClass("on")
+    $(".m_news_wrap>li").eq(count).addClass("on")
+})
+$(".m_news_arrow .next_b").click(function(){
+    $(".m_news_arrow .page_c").html(count+1)
+})
+$(".m_news_arrow .prev_b").click(function(){
+    $(".m_news_arrow .page_c").html(count+1)
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // $(".edition_s .next").click(function(){
 
