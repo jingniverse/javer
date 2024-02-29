@@ -2551,7 +2551,12 @@ letter-spacing:-0.4px;
     display: none;
 }
 .web_toon_more{
+    display: none;
     margin:0 20px;
+}
+
+.web_toon_more.active{
+    display: block;
 }
 .web_toon_more .w_d_list.week{
     padding: 12px 0 5px;
@@ -2663,25 +2668,25 @@ letter-spacing:-0.4px;
     background: #d3d5d7;
 }
 .best_league{
+    position: relative;
     border-top: 1px solid #ebebeb;
-    padding-top: 25px;
+    padding: 25px 0 24px;
     letter-spacing: -.4px;
 }
 .best_l_list_wrap{
     width: 790px;
-    position: relative;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
-.best_l_list_wrap .prev{
+.best_league .prev{
     transform: rotate(180deg);
     left:-12px;
 }
-.best_l_list_wrap .next{
+.best_league .next{
     right: -12px;
 }
 
-.best_l_list_wrap .prev,
-.best_l_list_wrap .next{
+.best_league .prev,
+.best_league .next{
     cursor: pointer;
     border: 1px solid #ebebeb;
     border-radius: 50%;
@@ -2689,11 +2694,11 @@ letter-spacing:-0.4px;
     height: 36px;
     position: absolute;
     background: white;
-    top: 20%;
+    top: 43%;
   
 }
-.best_l_list_wrap .prev::after,
-.best_l_list_wrap .next::after{
+.best_league .prev::after,
+.best_league .next::after{
     content: "";
     position: absolute;
     top: 50%;
@@ -2707,6 +2712,11 @@ letter-spacing:-0.4px;
 
 .best_l_list{
     display: flex;
+    width: 3240px;
+    transition: .5s all ease 0s;
+}
+.best_l_list li{
+    flex: none;
 }
 .best_l_list li+li{
     margin-left: 20px;
@@ -2731,12 +2741,19 @@ letter-spacing:-0.4px;
     font-size: 1.5rem;
     margin-bottom: 17px;
 }
-.best_league>p>span{
+
+.best_league>p a:hover{
+    text-decoration: underline;
+    /* cursor: pointer; */
+}
+.best_league>p span{
     display: flex;
     align-items: center;
     color: #606060;
+    font-size: 1.3rem;
+
 }
-.best_league>p>span::after{
+.best_league>p span::after{
     content: "";
     display: flex;
     align-items: center;
@@ -2750,6 +2767,7 @@ letter-spacing:-0.4px;
 }
 
 .best_l_list p{
+    width: 115px;
     margin: 9px 0 6px;
     line-height: 20px;
     font-size: 1.4rem;
@@ -2774,7 +2792,15 @@ letter-spacing:-0.4px;
 
 
 
-
+.beauty_list.more{
+    display: none;
+    border-top: 1px solid #ebebeb;
+    padding: 24px 0 4px;
+    margin: 0 20px;
+}
+.beauty_list.more.active{
+    display: flex;
+}
 
 
 .beauty_list{
@@ -3243,7 +3269,34 @@ color: #f0b200;
     background-size: 19px; 
 }
 
-
+.recipe_more .r_review .m_1 span::before{
+    background: url(../img/rm_icon1.png);
+    background-size: 19px; 
+}
+.recipe_more .r_review .m_2 span::before{
+    background: url(../img/rm_icon2.jpg);
+    background-size: 19px; 
+}
+.recipe_more .r_review .m_3 span::before{
+    background: url(../img/rm_icon3.png);
+    background-size: 19px; 
+}
+.recipe_more .r_review .m_5 span::before{
+    background: url(../img/rm_icon5.jpg);
+    background-size: 19px; 
+}
+.recipe_more .r_review .m_6 span::before{
+    background: url(../img/rm_icon6.png);
+    background-size: 19px; 
+}
+.recipe_more .r_review .m_7 span::before{
+    background: url(../img/rm_icon7.jpg);
+    background-size: 19px; 
+}
+.recipe_more .r_review .m_8 span::before{
+    background: url(../img/rm_icon8.jpg);
+    background-size: 19px; 
+}
 
 
 .more_view button{
@@ -3277,6 +3330,16 @@ color: #f0b200;
 }
 .webtoon .more_view .material-symbols-outlined{
     color: #00d564;
+}
+.recipe .more_view .material-symbols-outlined{
+    color: #ebaa00;
+}
+.beauty .more_view .material-symbols-outlined{
+    color: #8449cb;
+}
+.beauty .more_view.off,
+.webtoon .more_view.off{
+    display: none;
 }
 /* .more_view button::after{
     content: "";

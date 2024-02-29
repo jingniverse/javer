@@ -205,6 +205,45 @@ $(document).ready(function() {
     $(".edition_s .prev").hide(); 
 });
 
+$(".best_league .next").click(function(){
+    
+    count++
+    if(count>3){count=0}
+    $(".best_l_list").css("transform",`translateX(${(-25*count)}%)`)
+    if(count==3){
+        $(".best_league .next").hide()
+     }else {
+     $(".best_league .next").show()
+    }
+    if (count === 0) {
+        $(".best_league .prev").hide();
+    } else {
+        $(".best_league .prev").show();
+    }
+})
+$(".best_league .prev").click(function(){
+    count--
+    if(count<0){count=3}
+    $(".best_l_list").css("transform",`translateX(${(-25*count)}%)`)
+    if(count==0){
+        $(".best_league .prev").hide()
+     }else{
+     $(".best_league .prev").show()
+    }
+    if(count==3){
+        $(".best_league .next").hide()
+     }else {
+     $(".best_league .next").show()
+    }
+    
+})
+$(document).ready(function() {
+    $(".best_league .prev").hide(); 
+});
+
+
+
+
 $(".car_content_wrap .next").click(function(){
     
     count++
@@ -329,17 +368,31 @@ $(".main_news .m_news_arrow .prev_b").click(function(){
     $(".best_sub_content .more_view").click(function(){
         $('.all_list.more').addClass("active")
     })
-
-    $(".main_etc>.content>li>a").click(function(){
-        $('.all_list.more').removeClass("active")
-    })
     $(".car .more_view").click(function(){
         $('.review_wrap.more').addClass("active")
     })
+    $(".webtoon .more_view").click(function(){
+        $('.web_toon_more').addClass("active")
+        $(".webtoon .more_view").addClass('off')
+    })
+    $(".beauty .more_view").click(function(){
+        $('.beauty_list.more').addClass("active")
+        $(".beauty .more_view").addClass('off')
+    })
+
+
 
     $(".main_etc>.content>li>a").click(function(){
+        $('.all_list.more').removeClass("active")
         $('.review_wrap.more').removeClass("active")
+        $('.web_toon_more').removeClass("active")
+
+        $(".webtoon .more_view").removeClass('off')
+        $(".beauty .more_view").removeClass('off')
+
     })
+    
+
 
     $(".b_s_c_category>li").click(function(){
         $(".b_s_c_category>li").removeClass('active')
