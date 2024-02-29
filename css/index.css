@@ -1900,6 +1900,7 @@ align-items: center;
 }
 .car_content li span{
     font-size: 1.3rem;
+    color: #404040;
 }
 .car_content li p{
     font-weight: bold;
@@ -1962,6 +1963,7 @@ align-items: center;
     align-items: center;
     line-height: 20px;
     letter-spacing: -0.5px;
+    color: #404040;
 }
 .car_review span::before{
     content: "";
@@ -2213,7 +2215,7 @@ margin: 0 7px 1px 8px;
     height: 100%;
     transition: .4s all ease 0s;
 }
-.w_d_list img:hover{
+.w_d_list li:hover img{
     transform: scale(1.05);
 }
 .w_d_list p{
@@ -2222,13 +2224,13 @@ margin: 0 7px 1px 8px;
     margin: 10px 0 6px;
     font-size: 1.4rem;
 }
-.w_d_list li a:hover p{
+.w_d_list li:hover a p{
     text-decoration: underline;
 }
 .w_d_list span{
     letter-spacing: -0.4px;
     font-size: 1.3rem;
-    color: #8d8d8d;
+    color: #606060;
 }
 .webtoon_ad{
     position: relative;
@@ -2514,13 +2516,16 @@ letter-spacing:-0.4px;
     right: 0;
 }
 
+.e_s_list li:hover img{
+    transform: scale(1.05);
+}
 .e_s_list img{
     width: 100%;
     height: 100%;
     transition: .4s all ease 0s;
 }
-.e_s_list img:hover{
-    transform: scale(1.05);
+.e_s_list li:hover p{
+    text-decoration: underline;
 }
 .e_s_list p{
     line-height: 20px;
@@ -2531,7 +2536,7 @@ letter-spacing:-0.4px;
 .e_s_list span{
     letter-spacing: -0.4px;
     font-size: 1.3rem;
-    color: #8d8d8d;
+    color: #606060;
 }
 .t_n_list p:before,
 .e_s_list p:before,
@@ -2649,12 +2654,16 @@ letter-spacing:-0.4px;
 .t_n_list li:hover img{
     transform: scale(1.05);
 }
+.t_n_list li:hover p{
+    text-decoration: underline;
+}
 .t_n_list li p{
     line-height: 20px;
     font-size: 1.4rem;
     margin: 9px 0 6px;
 }
 .t_n_list li span{
+    color: #606060;
     font-size: 1.3rem;
 }
 .t_n_list li span+span::before{
@@ -2749,7 +2758,7 @@ letter-spacing:-0.4px;
 .best_league>p span{
     display: flex;
     align-items: center;
-    color: #606060;
+    color: #8d8d8d;
     font-size: 1.3rem;
 
 }
@@ -2774,6 +2783,7 @@ letter-spacing:-0.4px;
 }
 .best_l_list span{
     font-size: 1.3rem;
+    color: #8d8d8d;
 }
 
 
@@ -2815,6 +2825,9 @@ letter-spacing:-0.4px;
     width: 183px;
     letter-spacing: -.5px;
 }
+.beauty_list li:hover p{
+    text-decoration: underlinez;
+}
 .beauty_list li:nth-of-type(2n){
     width: 182px;
 }
@@ -2829,13 +2842,16 @@ letter-spacing:-0.4px;
     border-radius: 4px;
 }
 
-.beauty_list img:hover{
+.beauty_list li:hover img{
     transform: scale(1.05);
 }
 .beauty_list img{
     transition: .6s all ease 0s;
     width: 100%;
     height: 100%;
+}
+.beauty_list li:hover p{
+    text-decoration: underline;
 }
 .beauty_list p{
     font-size: 1.4rem;
@@ -2943,9 +2959,13 @@ letter-spacing:-0.4px;
 }
 .r_content li span{
     font-size: 1.3rem;
+    color: #404040;
 }
 .r_content li span:last-of-type{
     margin-top: 2px;
+}
+.r_content li:hover p{
+    text-decoration: underline;
 }
 .r_content li p{
     font-weight: bold;
@@ -2963,6 +2983,15 @@ letter-spacing:-0.4px;
     border-top: 1px solid #ebebeb;
     margin: 25px 20px 8px;
     padding: 24px 0 0;
+}
+.recipe_more{
+    display: none;
+}
+.recipe_more.active{
+    display: block;
+}
+.recipe_more .review_wrap {
+    margin-top: 24px;
 }
 .review_wrap.more{
     margin-top: 8px;
@@ -2985,6 +3014,9 @@ letter-spacing:-0.4px;
     display: flex;
     /* align-items: center; */
 }
+.r_review li:hover p{
+    text-decoration: underline;
+}
 .r_review p{
     letter-spacing: -0.4px;
     width: 210px ;
@@ -3005,6 +3037,7 @@ letter-spacing:-0.4px;
     align-items: center;
     line-height: 20px;
     letter-spacing: -0.5px;
+    color: #606060;
 }
 .r_review span::before{
     content: "";
@@ -3086,22 +3119,25 @@ letter-spacing:-0.4px;
     letter-spacing: -0.4px;
     margin-top: 28px;
 }
+.recipe_theme2,
 .recipe_theme{
 width: 790px;
 position: relative;
 margin: 4px 20px 24px;
 border-top: 1px solid #ebebeb;
 }
+.recipe_theme2>p,
 .recipe_theme>p{
     margin: 25px 0 17px;
     font-size: 1.5rem;
     font-weight: bold;
     letter-spacing: -.4px;
 }
-.r_t_wrap{
+.r_t_wrap,.r_t_wrap2{
     width: 790px;
     overflow: hidden;
 }
+.recipe_theme2 .prev,.recipe_theme2 .next,
 .recipe_theme .prev,.recipe_theme .next{
     position: absolute;
     top: 38%;
@@ -3113,14 +3149,17 @@ border-top: 1px solid #ebebeb;
     height: 36px;
     background: white;
 }
+.recipe_theme2 .prev,
 .recipe_theme .prev{
     left: -12px;
     transform: rotate(180deg)
 }
+.recipe_theme2 .next,
 .recipe_theme .next{
     top:44%;
     right: -30px;
 }
+.recipe_theme2 .prev::after,.recipe_theme2 .next::after,
 .recipe_theme .prev::after,.recipe_theme .next::after{
     content: "";
     position: absolute;
@@ -3132,58 +3171,90 @@ border-top: 1px solid #ebebeb;
     height: 10px;
     transform: translate(-50%,-50%)
 }
-.r_t_list{
+.r_t_list,.r_t_list_more{
     width: 4050px;
     display: flex;
     transition: .5s all ease 0s;
 } 
-.r_t_list li{
+.r_t_list_more li,.r_t_list li{
     flex: none;
     letter-spacing: -.4px;
     line-height: 20px;
 }
+.r_t_list_more li:nth-of-type(2n+1),
 .r_t_list li:nth-of-type(2n+1){
     width: 183px;
 }
+.r_t_list_more li+li,
 .r_t_list li+li{
     margin-left: 20px;
 }
-
-.r_t_list .pic{
+.r_t_list_more .pic,.r_t_list .pic{
     border-radius: 4px;
     overflow: hidden;
     width: 182px;
     height: 120px;
     margin-bottom: 10px;
 }
-.r_t_list img{
+.recipe_more .r_t_list_more .pic{
+    position: relative;
+}
+.recipe_more .r_t_list_more .pic span{
+    position: absolute;
+    font-size: 12px;
+    padding-right: 5px;
+    border-radius: 0 0 4px 0;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+
+}
+.recipe_more .r_t_list_more .pic span::before{
+    content: "";
+    display: inline-block;
+    background: url(../img/sp_main.ae81c9d5.png) no-repeat -432px -130px;
+	background-size: 444px 434px;
+	width: 12px;
+	height: 11px;;
+    margin:0 4px 1px 6px ;
+}
+.r_t_list_more img,.r_t_list img{
     width: 100%;
     height: 100%;
     transition: .4s all ease 0s;
 }
-.r_t_list img:hover{
+.r_t_list_more li:hover img,.r_t_list li:hover img{
     transform: scale(1.05);
 }
-.r_t_list li .title{
+.r_t_list_more li .title,.r_t_list li .title{
 color: #f0b200;
 }
-.r_t_list p{
+.r_t_list_more li:hover p,.r_t_list li:hover p{
+    text-decoration: underline;
+}
+.r_t_list_more p,.r_t_list p{
     margin: 4px 0 ;
     font-size: 1.4rem;
     width: 182px;
 }
-.r_t_list li span{
+.r_t_list_more li span,.r_t_list li span{
     font-size: 1.3rem;
 }
-.r_t_list .name{
+
+.r_t_list_more .name,.r_t_list .name{
     font-size: 1.3rem;
     display: flex;
     margin-top: 4px;
     align-items: center;
     line-height: 20px;
-    letter-spacing: -0.5px;
+    letter-spacing: -0.45px;
+    color: #606060;
 }
-.r_t_list .name::before{
+.r_t_list_more .name::before,.r_t_list .name::before{
     content: "";
     border-radius: 50%;
     width: 20px;
@@ -3197,6 +3268,31 @@ color: #f0b200;
     border: 1px solid 
     #ebebeb;
 }
+
+.r_t_list_more .info{
+    display: flex;
+}
+.r_t_list_more .info span{
+    display: flex;
+    align-items: center;
+    color: #404040;
+}
+.r_t_list_more span.name{
+    margin-top: 0;
+    color: #606060;
+
+}
+.r_t_list_more .info span+span::before{
+    content: "";
+    display: inline-block;
+    justify-content: center;
+    width: 3px;
+    height: 3px;
+    margin: 0 6px 0 15px;
+    vertical-align: middle;
+    background: #d3d5d7;
+}
+
 .r_t_list .b_1 .name::before{
     background: url(../img/b_icon1.jpg);
     background-size: 19px; 
@@ -3297,6 +3393,134 @@ color: #f0b200;
     background: url(../img/rm_icon8.jpg);
     background-size: 19px; 
 }
+
+.r_t_list_more .b_1 .name::before,.r_t_list_more .b_12 .name::before,.r_t_list_more .b_13 .name::before,.r_t_list_more .b_15 .name::before{
+    background: url(../img/ft_icon1.jpg);
+    background-size: 19px; 
+}
+.r_t_list_more .b_2 .name::before{
+    background: url(../img/ft_icon2.jpg);
+    background-size: 19px; 
+}
+.r_t_list_more .b_3 .name::before{
+    background: url(../img/ft_icon3.jpg);
+    background-size: 19px; 
+}
+.r_t_list_more .b_4 .name::before{
+    background: url(../img/ft_icon4.png);
+    background-size: 19px; 
+}
+.r_t_list_more .b_5 .name::before{
+    background: url(../img/ft_icon5.jpg);
+    background-size: 19px; 
+}
+.r_t_list_more .b_6 .name::before{
+    background: url(../img/ft_icon6.jpg);
+    background-size: 19px; 
+}
+.r_t_list_more .b_7 .name::before{
+    background: url(../img/ft_icon7.jpg);
+    background-size: 19px; 
+}
+.r_t_list_more .b_8 .name::before{
+    background: url(../img/ft_icon8.jpg);
+    background-size: 19px; 
+}
+.r_t_list_more .b_9 .name::before{
+    background: url(../img/ft_icon9.jpg);
+    background-size: 19px; 
+}
+.r_t_list_more .b_10 .name::before{
+    background: url(../img/ft_icon10.jpg);
+    background-size: 19px; 
+}
+.r_t_list_more .b_11 .name::before{
+    background: url(../img/ft_icon11.jpg);
+    background-size: 19px; 
+}
+.r_t_list_more .b_14 .name::before{
+    background: url(../img/ft_icon14.jpg);
+    background-size: 19px; 
+}
+.r_t_list_more .b_16 .name::before{
+    background: url(../img/ft_icon16.jpg);
+    background-size: 19px; 
+}
+.r_t_list_more .b_17 .name::before{
+    background: url(../img/ft_icon17.jpg);
+    background-size: 19px; 
+}
+.r_t_list_more .b_18 .name::before{
+    background: url(../img/ft_icon18.jpg);
+    background-size: 19px; 
+}
+.r_t_list_more .b_19 .name::before{
+    background: url(../img/ft_icon19.png);
+    background-size: 19px; 
+}
+.r_t_list_more .b_20 .name::before{
+    background: url(../img/ft_icon20.jpg);
+    background-size: 19px; 
+}
+
+.living_list{
+    display: flex;
+    padding: 19px 20px;
+    flex-flow: wrap;
+}
+.living_list li{
+    width: 183px;
+}
+.living_list li:nth-of-type(2n){
+    width: 182px;
+}
+.living_list li:nth-of-type(4n+1){
+    margin-left: 0;
+}
+.living_list li+li{
+    margin-left: 20px;
+}
+.living_list li .pic{
+    width: 183px;
+    height: 120px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.living_list li:nth-of-type(2n) .pic{
+    width: 182px;
+}
+.living_list li img{
+    width: 100%;
+    height: 100%;
+    transition: .6s all ease 0s;
+}
+.living_list li:hover img{
+    transform: scale(1.05);
+}
+.living_list li:hover p{
+    text-decoration: underline;
+}
+.living_list li p{
+    font-size: 1.4rem;
+    letter-spacing: -.4px;
+}
+.living_list li span{
+    display: flex;
+    align-items: center;
+}
+.living_list li span::before{
+content: "";
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    margin-right: 6px;
+    align-items: center;
+    box-sizing: border-box;
+    border: 1px solid #ebebeb;
+}
+
+
 
 
 .more_view button{

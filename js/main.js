@@ -277,44 +277,82 @@ $(".car_content_wrap .prev").click(function(){
     
 })
 $(document).ready(function() {
-    $(".recipe_theme .prev").hide(); 
+    $(".car_content_wrap .prev").hide(); 
 });
 
-$(".recipe_theme .next").click(function(){
+$(".recipe_theme>.next").click(function(){
     
     count++
     if(count>4){count=0}
     $(".r_t_list").css("transform",`translateX(${(-20*count)}%)`)
     if(count==4){
-        $(".recipe_theme .next").hide()
+        $(".recipe_theme>.next").hide()
      }else {
-     $(".recipe_theme .next").show()
+     $(".recipe_theme>.next").show()
     }
     if (count === 0) {
-        $(".recipe_theme .prev").hide();
+        $(".recipe_theme>.prev").hide();
     } else {
-        $(".recipe_theme .prev").show();
+        $(".recipe_theme> .prev").show();
     }
 })
-$(".recipe_theme .prev").click(function(){
+$(".recipe_theme>.prev").click(function(){
     count--
     if(count<0){count=4}
     $(".r_t_list").css("transform",`translateX(${(-20*count)}%)`)
     if(count==0){
-        $(".recipe_theme .prev").hide()
+        $(".recipe_theme> .prev").hide()
      }else{
-     $(".recipe_theme .prev").show()
+     $(".recipe_theme> .prev").show()
     }
     if(count==4){
-        $(".recipe_theme .next").hide()
+        $(".recipe_theme> .next").hide()
      }else {
-     $(".recipe_theme .next").show()
+     $(".recipe_theme> .next").show()
     }
     
 })
 $(document).ready(function() {
-    $(".recipe_theme .prev").hide(); 
+    $(".recipe_theme> .prev").hide(); 
 });
+
+
+$(".recipe_theme2> .next").click(function(){
+    
+    count++
+    if(count>4){count=0}
+    $(".r_t_list_more").css("transform",`translateX(${(-20*count)}%)`)
+    if(count==4){
+        $(".recipe_theme2> .next").hide()
+     }else {
+     $(".recipe_theme2>.next").show()
+    }
+    if (count === 0) {
+        $(".recipe_theme2>.prev").hide();
+    } else {
+        $(".recipe_theme2>.prev").show();
+    }
+})
+$(".recipe_theme2> .prev").click(function(){
+    count--
+    if(count<0){count=4}
+    $(".r_t_list_more").css("transform",`translateX(${(-20*count)}%)`)
+    if(count==0){
+        $(".recipe_theme2>.prev").hide()
+     }else{
+     $(".recipe_theme2> .prev").show()
+    }
+    if(count==4){
+        $(".recipe_theme2>.next").hide()
+     }else {
+     $(".recipe_theme2> .next").show()
+    }
+    
+})
+$(document).ready(function() {
+    $(".recipe_theme2>.prev").hide(); 
+});
+
 
 $(".main_news .m_news_arrow .next_b").click(function(){
     count++
@@ -379,13 +417,16 @@ $(".main_news .m_news_arrow .prev_b").click(function(){
         $('.beauty_list.more').addClass("active")
         $(".beauty .more_view").addClass('off')
     })
-
+    $(".recipe .more_view").click(function(){
+        $('.recipe_more').addClass("active")
+    })
 
 
     $(".main_etc>.content>li>a").click(function(){
         $('.all_list.more').removeClass("active")
         $('.review_wrap.more').removeClass("active")
         $('.web_toon_more').removeClass("active")
+        $('.recipe_more').removeClass("active")
 
         $(".webtoon .more_view").removeClass('off')
         $(".beauty .more_view").removeClass('off')
