@@ -20,7 +20,7 @@ header{
     padding: 0px 0 27px;
 }
 main{
-    margin-bottom: 59px;
+    margin-bottom: 60px;
 }
 /* 서치 바 */
 form{    
@@ -1547,7 +1547,7 @@ align-items: center;
 }
 .main_etc .content{
     display: flex;
-    padding: 21px 21px 0;
+    padding: 21px 20px 0;
 
 }
 .main_etc .content li{
@@ -3465,48 +3465,75 @@ color: #f0b200;
 
 .living_list{
     display: flex;
-    padding: 19px 20px;
+    padding: 19px 20px 4px;
     flex-flow: wrap;
 }
+.living_list.more{
+    display: none;
+    border-top: 1px solid #ebebeb;
+    padding: 24px 0 4px;
+    margin: 0 20px;
+}
+.living_list.more.active{
+    display: flex;
+}
+
+.mliving_list li,
 .living_list li{
     width: 183px;
+    margin-bottom: 20px;
 }
+.mliving_list li:nth-of-type(2n),
 .living_list li:nth-of-type(2n){
     width: 182px;
 }
 .living_list li:nth-of-type(4n+1){
     margin-left: 0;
 }
+.mliving_list li+li,
 .living_list li+li{
     margin-left: 20px;
 }
+.mliving_list li .pic,
 .living_list li .pic{
     width: 183px;
     height: 120px;
     border-radius: 4px;
     overflow: hidden;
 }
+.mliving_list li:nth-of-type(2n) .pic,
 .living_list li:nth-of-type(2n) .pic{
     width: 182px;
 }
+.mliving_list li img,
 .living_list li img{
     width: 100%;
     height: 100%;
     transition: .6s all ease 0s;
 }
+.mliving_list li:hover img,
 .living_list li:hover img{
     transform: scale(1.05);
 }
+.mliving_list li:hover p,
 .living_list li:hover p{
     text-decoration: underline;
 }
+.mliving_list li p,
 .living_list li p{
+    width: 183px;
     font-size: 1.4rem;
     letter-spacing: -.4px;
+    margin: 10px 0 4px;
+    line-height: 20px;
 }
 .living_list li span{
     display: flex;
     align-items: center;
+    letter-spacing: -.4px;
+    font-size: 1.3rem;
+    color: #606060;
+
 }
 .living_list li span::before{
 content: "";
@@ -3519,6 +3546,196 @@ content: "";
     box-sizing: border-box;
     border: 1px solid #ebebeb;
 }
+.middle_wrap{
+    border-top: 1px solid #ebebeb;
+    padding: 25px 0 24px;
+    margin: 0 20px;
+}
+.mliving_list li p{
+    margin-bottom: 6px;
+}
+.middle_wrap>p{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: -.4px;
+    margin-bottom: 17px;
+}
+.middle_wrap>p span{
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+    font-weight: normal;
+    color: #606060;
+}
+.middle_wrap>p a :hover{
+
+    text-decoration: underline;
+}
+.middle_wrap>p span::after{
+    content: "";
+    display: flex;
+    background: url(../img/sp_main.ae81c9d5.png) -10px -423px;
+    background-size: 444px 434px;
+    width: 7px;
+    height: 10px;
+    align-items: center;
+    margin-left: 6px;
+    margin-right: 1px;
+}
+.mliving_list{
+    display: flex;
+}
+.mliving_list li{
+    margin-bottom: 0;
+}
+.mliving_list .pic{
+    position: relative;
+}
+.mliving_list .pic span{
+    position: absolute;
+    font-size: 12px;
+    padding-top: 2px;
+    padding-right: 5px;
+    border-radius: 0 0 4px 0;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+.mliving_list .pic span::before{
+    content: "";
+    display: inline-block;
+    background: url(../img/sp_main.ae81c9d5.png)no-repeat -432px -259px;
+	background-size: 444px 434px;
+	width: 10px;
+	height: 12px;
+    margin: 0 4px 1px 6px;
+}
+.mliving_list li a>span{
+    font-size: 1.3rem;
+    color: #606060 ;
+    letter-spacing: -.4px;
+
+}
+.mliving_list .per i{
+    color: #10c838 ;
+    font-weight: bold;
+}
+.mliving_list .per::before{
+    content: "";
+    display: inline-block;
+    justify-content: center;
+    width: 3px;
+    height: 3px;
+    margin: 0 6px 3px 6px;
+    vertical-align: middle;
+    background: #d3d5d7;
+}    
+
+.living_list .vi_1 span::before{
+    background: url(../img/li_icon1.jpg);
+    background-size: 19px;
+}
+.living_list .vi_2 span::before{
+    background: url(../img/li_icon2.png);
+    background-size: 19px;
+}
+.living_list .vi_3 span::before{
+    background: url(../img/li_icon3.jpg);
+    background-size: 19px;
+}
+.living_list .vi_4 span::before{
+    background: url(../img/li_icon4.jpg);
+    background-size: 19px;
+}
+.living_list .vi_5 span::before,
+.living_list .vi_20 span::before{
+    background: url(../img/li_icon5.jpg);
+    background-size: 19px;
+}
+.living_list .vi_6 span::before{
+    background: url(../img/li_icon6.png);
+    background-size: 19px;
+}
+.living_list .vi_7 span::before{
+    background: url(../img/li_icon7.jpg);
+    background-size: 19px;
+}
+.living_list .vi_8 span::before{
+    background: url(../img/li_icon8.jpg);
+    background-size: 19px;
+}
+.living_list .vi_9 span::before{
+    background: url(../img/li_icon9.jpg);
+    background-size: 19px;
+}
+.living_list .vi_10 span::before{
+    background: url(../img/li_icon10.jpg);
+    background-size: 19px;
+}
+.living_list .vi_11 span::before{
+    background: url(../img/li_icon11.jpg);
+    background-size: 19px;
+}
+.living_list .vi_12 span::before{
+    background: url(../img/li_icon12.png);
+    background-size: 19px;
+}
+.living_list .vi_13 span::before{
+    background: url(../img/li_icon13.jpg);
+    background-size: 19px;
+}
+.living_list .vi_14 span::before{
+    background: url(../img/li_icon14.jpg);
+    background-size: 19px;
+}
+.living_list .vi_15 span::before{
+    background: url(../img/li_icon15.jpg);
+    background-size: 19px;
+}
+.living_list .vi_16 span::before{
+    background: url(../img/li_icon16.png);
+    background-size: 19px;
+}
+.living_list .vi_17 span::before{
+    background: url(../img/li_icon17.jpg);
+    background-size: 19px;
+}
+.living_list .vi_18 span::before{
+    background: url(../img/li_icon18.jpg);
+    background-size: 19px;
+}
+.living_list .vi_19 span::before{
+    background: url(../img/li_icon19.jpg);
+    background-size: 19px;
+}
+.living_list .vi_21 span::before{
+    background: url(../img/li_icon21.jpg);
+    background-size: 19px;
+}
+.living_list .vi_22 span::before{
+    background: url(../img/li_icon22.jpg);
+    background-size: 19px;
+}
+.living_list .vi_23 span::before{
+    background: url(../img/li_icon23.jpg);
+    background-size: 19px;
+}
+.living_list .vi_24 span::before{
+    background: url(../img/li_icon24.jpg);
+    background-size: 19px;
+}
+
+
+
+
+
+
 
 
 
@@ -3561,6 +3778,7 @@ content: "";
 .beauty .more_view .material-symbols-outlined{
     color: #8449cb;
 }
+.living .more_view.off,
 .beauty .more_view.off,
 .webtoon .more_view.off{
     display: none;

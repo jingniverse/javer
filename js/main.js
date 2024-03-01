@@ -420,6 +420,11 @@ $(".main_news .m_news_arrow .prev_b").click(function(){
     $(".recipe .more_view").click(function(){
         $('.recipe_more').addClass("active")
     })
+    $(".living .more_view").click(function(){
+        $('.living_list.more').addClass("active")
+        $(".living .more_view").addClass('off')
+
+    })
 
 
     $(".main_etc>.content>li>a").click(function(){
@@ -427,9 +432,11 @@ $(".main_news .m_news_arrow .prev_b").click(function(){
         $('.review_wrap.more').removeClass("active")
         $('.web_toon_more').removeClass("active")
         $('.recipe_more').removeClass("active")
+        $('.living_list.more').removeClass("active")
 
         $(".webtoon .more_view").removeClass('off')
         $(".beauty .more_view").removeClass('off')
+        $(".living .more_view").removeClass('off')
 
     })
     
