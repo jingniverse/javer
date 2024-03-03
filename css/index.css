@@ -3886,6 +3886,7 @@ content: "";
 .hb_list li:hover img{
     transform: scale(1.05);
 }
+
 .mn_list li p,
 .bs_list li p,
 .hb_list li p{
@@ -3894,6 +3895,11 @@ content: "";
     color: #101010 ;
     margin: 10px 0 6px;
     width: 108px;
+}
+.mn_list li:hover p,
+.bs_list li:hover p,
+.hb_list li:hover p{
+    text-decoration: underline;
 }
 .mn_list li span,
 .bs_list li span,

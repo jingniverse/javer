@@ -356,9 +356,9 @@ $(document).ready(function() {
 $(".best_seller> .next").click(function(){
     
     count++
-    if(count>4){count=0}
-        $(".bs_list").css("transform",`translateX(${(-20*count)}%)`)
-    if(count==4){
+    if(count>3){count=0}
+        $(".bs_list").css("transform",`translateX(${(-30.3*count)}%)`)
+    if(count==3){
         $(".bs_list").css("transform",`translateX(-70.7%)`)
         $(".best_seller> .next").hide()
      }else {
@@ -372,14 +372,17 @@ $(".best_seller> .next").click(function(){
 })
 $(".best_seller> .prev").click(function(){
     count--
-    if(count<0){count=4}
-    $(".bs_list").css("transform",`translateX(${(-20*count)}%)`)
+    if(count<0){count=3}
+    $(".bs_list").css("transform",`translateX(${(-20.2*count)}%)`)
+    if(count==1){
+        $(".bs_list").css("transform",`translateX(-10%)`)
+    }
     if(count==0){
         $(".best_seller>.prev").hide()
      }else{
      $(".best_seller> .prev").show()
     }
-    if(count==4){
+    if(count==3){
         $(".best_seller>.next").hide()
      }else {
      $(".best_seller> .next").show()
@@ -393,9 +396,9 @@ $(document).ready(function() {
 $(".month_new> .next2").click(function(){
     
     count++
-    if(count>4){count=0}
-        $(".mn_list").css("transform",`translateX(${(-20*count)}%)`)
-    if(count==4){
+    if(count>3){count=0}
+        $(".mn_list").css("transform",`translateX(${(-30.3*count)}%)`)
+    if(count==3){
         $(".mn_list").css("transform",`translateX(-70.7%)`)
         $(".month_new> .next2").hide()
      }else {
@@ -409,14 +412,17 @@ $(".month_new> .next2").click(function(){
 })
 $(".month_new> .prev2").click(function(){
     count--
-    if(count<0){count=4}
-    $(".mn_list").css("transform",`translateX(${(-20*count)}%)`)
+    if(count<0){count=3}
+    $(".mn_list").css("transform",`translateX(${(-20.2*count)}%)`)
+    if(count==1){
+        $(".mn_list").css("transform",`translateX(-10%)`)
+    }
     if(count==0){
         $(".month_new>.prev2").hide()
      }else{
      $(".month_new> .prev2").show()
     }
-    if(count==4){
+    if(count==3){
         $(".month_new>.next2").hide()
      }else {
      $(".month_new> .next2").show()
