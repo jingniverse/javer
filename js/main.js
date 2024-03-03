@@ -353,6 +353,80 @@ $(document).ready(function() {
     $(".recipe_theme2>.prev").hide(); 
 });
 
+$(".best_seller> .next").click(function(){
+    
+    count++
+    if(count>4){count=0}
+        $(".bs_list").css("transform",`translateX(${(-20*count)}%)`)
+    if(count==4){
+        $(".bs_list").css("transform",`translateX(-70.7%)`)
+        $(".best_seller> .next").hide()
+     }else {
+     $(".best_seller>.next").show()
+    }
+    if (count === 0) {
+        $(".best_seller>.prev").hide();
+    } else {
+        $(".best_seller>.prev").show();
+    }
+})
+$(".best_seller> .prev").click(function(){
+    count--
+    if(count<0){count=4}
+    $(".bs_list").css("transform",`translateX(${(-20*count)}%)`)
+    if(count==0){
+        $(".best_seller>.prev").hide()
+     }else{
+     $(".best_seller> .prev").show()
+    }
+    if(count==4){
+        $(".best_seller>.next").hide()
+     }else {
+     $(".best_seller> .next").show()
+    }
+    
+})
+$(document).ready(function() {
+    $(".best_seller>.prev").hide(); 
+});
+
+$(".month_new> .next2").click(function(){
+    
+    count++
+    if(count>4){count=0}
+        $(".mn_list").css("transform",`translateX(${(-20*count)}%)`)
+    if(count==4){
+        $(".mn_list").css("transform",`translateX(-70.7%)`)
+        $(".month_new> .next2").hide()
+     }else {
+     $(".month_new>.next2").show()
+    }
+    if (count === 0) {
+        $(".month_new>.prev2").hide();
+    } else {
+        $(".month_new>.prev2").show();
+    }
+})
+$(".month_new> .prev2").click(function(){
+    count--
+    if(count<0){count=4}
+    $(".mn_list").css("transform",`translateX(${(-20*count)}%)`)
+    if(count==0){
+        $(".month_new>.prev2").hide()
+     }else{
+     $(".month_new> .prev2").show()
+    }
+    if(count==4){
+        $(".month_new>.next2").hide()
+     }else {
+     $(".month_new> .next2").show()
+    }
+    
+})
+$(document).ready(function() {
+    $(".month_new>.prev2").hide(); 
+});
+
 
 $(".main_news .m_news_arrow .next_b").click(function(){
     count++
@@ -423,9 +497,10 @@ $(".main_news .m_news_arrow .prev_b").click(function(){
     $(".living .more_view").click(function(){
         $('.living_list.more').addClass("active")
         $(".living .more_view").addClass('off')
-
     })
-
+    $(".bookstore .more_view").click(function(){
+        $('.bookstore_more').addClass("active")
+    })
 
     $(".main_etc>.content>li>a").click(function(){
         $('.all_list.more').removeClass("active")

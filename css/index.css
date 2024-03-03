@@ -3139,6 +3139,8 @@ border-top: 1px solid #ebebeb;
     width: 790px;
     overflow: hidden;
 }
+.month_new .next2,.month_new .prev2,
+.best_seller .next,.best_seller .prev,
 .recipe_theme2 .prev,.recipe_theme2 .next,
 .recipe_theme .prev,.recipe_theme .next{
     position: absolute;
@@ -3151,16 +3153,22 @@ border-top: 1px solid #ebebeb;
     height: 36px;
     background: white;
 }
+.month_new .prev2,
+.best_seller .prev,
 .recipe_theme2 .prev,
 .recipe_theme .prev{
     left: -12px;
     transform: rotate(180deg)
 }
+.best_seller .next,
+.month_new .next2,
 .recipe_theme2 .next,
 .recipe_theme .next{
     top:44%;
     right: -30px;
 }
+.month_new .next2::after,.month_new .prev2::after,
+.best_seller .next::after,.best_seller .prev::after,
 .recipe_theme2 .prev::after,.recipe_theme2 .next::after,
 .recipe_theme .prev::after,.recipe_theme .next::after{
     content: "";
@@ -3794,41 +3802,153 @@ content: "";
     padding-top: 2px;
 }
 .hot_book{
-    margin: 20px;
+    margin: 25px 20px 4px;
 }
-.hot_book>p{
+.hot_book>p,.best_seller>p,.month_new>p{
     font-weight: bold;
     font-size: 1.5rem;
+    margin-bottom: 18px;
+    letter-spacing: -.4px;
 }
 .hb_list{
     display: flex;
     flex-flow: wrap;
 }
+.mn_list li,
+.bs_list li,
+.hb_list li{
+    letter-spacing: -.4px;
+    width: 108px;
+    margin-bottom: 20px;
+}
+.mn_list li:nth-of-type(3n-1),
+.bs_list li:nth-of-type(3n-1),
+.hb_list li:nth-of-type(3n-1){
+    width: 109px;
+}
+.mn_list li+li,
+.bs_list li+li,
 .hb_list li+li{
     margin-left: 28px;
 }
 .hb_list li+li:nth-of-type(6n+1){
     margin-left: 0;
 }
+.mn_list .pic::after,
+.bs_list .pic::after,
+.hb_list .pic::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ebebeb61;
+    left: 0;
+    top: 0;
+    position: absolute;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.mn_list .pic span::after,
+.bs_list .pic span::after,
+.hb_list .pic span::after{
+    position: absolute;
+    content: "";
+    display: inline-block;
+    width: 2px;
+    border-left: 2px solid rgba(0, 0, 0, 0.1);
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    height: 100%;
+    left: 0px;
+    top: 0;
+}
+.mn_list .pic,
+.bs_list .pic,
 .hb_list .pic{
-     width: 108px;
-     height: 156px;
+    width: 108px;
+    height: 156px;
      border-radius: 4px;
      overflow: hidden;
+     position: relative;
 }
+.mn_list .pic:nth-of-type(3n-1),
+.bs_list .pic:nth-of-type(3n-1),
+.hb_list .pic:nth-of-type(3n-1){
+    width: 109px;
+}
+.mn_list img,
+.bs_list img,
 .hb_list img{
     width: 100%;
     height: 100%;
+    transition: .6s all ease 0s;
 }
+.mn_list li:hover img,
+.bs_list li:hover img,
+.hb_list li:hover img{
+    transform: scale(1.05);
+}
+.mn_list li p,
+.bs_list li p,
+.hb_list li p{
+    line-height: 20px;
+    font-size: 1.4rem;
+    color: #101010 ;
+    margin: 10px 0 6px;
+    width: 108px;
+}
+.mn_list li span,
+.bs_list li span,
+.hb_list li span{
+    font-size: 1.3rem;
+    color: #606060;
+}
+.bs_list li span i,
+.hb_list li span i{
+    display: inline-block;
+    width: 3px;
+    height: 3px;
+    margin: 0 7px 4px;
+    vertical-align: middle;
+    background: #d3d5d7;
+}
+.bookstore_more{
+    display: none;
+}
+.bookstore_more.active{
+    display: block;
+}
+.best_seller,.month_new{
+    position: relative;
+    margin: 0 20px;
+    border-top: 1px solid #ebebeb;
+}
+.month_new{
+    margin-top: 4px;
+}
+.bs_list,.mn_list{
+    width: 2695px;
+    display: flex;
+    transition: .6s all ease 0s;
+}
+.mn_wrap,.bs_wrap{
+    width: 790px;
+    overflow: hidden;
 
-
-
-
-
-
-
-
-
+}
+.month_new>p,
+.best_seller>p{
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 17px;
+}
+.best_seller>p>span{
+    font-size: 1.3rem;
+    color: #606060;
+    font-weight: normal;
+}
+.month_new .next2,.best_seller .next{
+    /* right: 0; */
+}
 
 
 
@@ -3865,6 +3985,9 @@ content: "";
 .car .more_view,
 .recipe .more_view{
     padding-bottom: 1px;
+}
+.bookstore .more_view .material-symbols-outlined{
+    color: #a84c30;
 }
 .living .more_view .material-symbols-outlined{
     color: #795548;
