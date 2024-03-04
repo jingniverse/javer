@@ -1685,13 +1685,25 @@ align-items: center;
     margin-left: 20px;
 
 }
-.all_list li div{
-    border-radius: 5px;
+.all_list li .pic{
+    border-radius: 4px;
     width: 183px;
     height: 120px;
     overflow: hidden;
+    position: relative;
 }
-.all_list li:nth-of-type(2n) div{
+.all_list li .pic::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ebebeb64;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+.all_list li:nth-of-type(2n) .pic{
     width: 182px;
 }
 .all_list li:hover p{
@@ -1714,7 +1726,13 @@ align-items: center;
     align-items: center ;
     font-size: 1.3rem;
     color: #606060;
-
+}
+.all_list li span i{
+    display: inline-block;
+    width: 3px;
+    height: 3px;
+    margin: 0 6px;
+    background: #d3d5d7;
 }
 .all_list li span::before{
     content: "";
@@ -1770,11 +1788,64 @@ align-items: center;
     background: url(../img/audi2.png);
     background-size: 20px;
 }
+.all_list .all_1 span::before{
+    background: url(../img/all_icon1.jpg);
+    background-size: 20px;
+}
+.all_list .all_2 span::before{
+    background: url(../img/all_icon2.jpg);
+    background-size: 20px;
+}
+.all_list .all_3 span::before{
+    background: url(../img/all_icon3.jpg);
+    background-size: 20px;
+}
+.all_list .all_4 span::before{
+    background: url(../img/all_icon4.jpg);
+    background-size: 20px;
+}
+.all_list .all_5 span::before{
+    background: url(../img/all_icon5.jpg);
+    background-size: 20px;
+}
+.all_list .all_6 span::before{
+    background: url(../img/all_icon6.jpg);
+    background-size: 20px;
+}
+.all_list .all_7 span::before{
+    background: url(../img/all_icon7.png);
+    background-size: 20px;
+}
+.all_list .all_8 span::before{
+    background: url(../img/all_icon8.png);
+    background-size: 20px;
+}
+.all_list .all_9 span::before{
+    background: url(../img/all_icon9.png);
+    background-size: 20px;
+}
+.all_list .all_10 span::before{
+    background: url(../img/all_icon10.jpg);
+    background-size: 20px;
+}
+.all_list .all_11 span::before{
+    background: url(../img/all_icon11.jpg);
+    background-size: 20px;
+}
+.all_list .all_12 span::before{
+    background: url(../img/all_icon12.jpg);
+    background-size: 20px;
+}
+.short_video_wrap{
+    position: relative;
+}
 .short_video{
     margin-top: 4px;
     padding-top: 25px;
     border-top:1px solid #ebebeb ;
+    overflow: hidden;
 }
+
 .s_v_title>span{
     display: inline-block;
     margin-bottom: 17px;
@@ -1783,14 +1854,18 @@ align-items: center;
     letter-spacing: -.4px;
 }
 .s_v_list{
+    width: 2012px;
     display: flex;
     margin-bottom: 19px;
+    transition: .6s all ease 0s;
 }
 .s_v_list li{
     width: 108px;
     height: 156px;
     height:235px ;
-
+}
+.s_v_list li:nth-of-type(3n-1){
+    width: 109px;
 }
 
 .s_v_list li+li{
@@ -1907,6 +1982,10 @@ align-items: center;
     margin: 5px 0 6px;
     font-size: 1.4rem;
 }
+.car_content li:hover p{
+    text-decoration: underline;
+}
+
 .car_content li .ad{
     color: #2981db;
     font-weight: bold;
@@ -1949,6 +2028,9 @@ align-items: center;
     line-height: 21px;
     margin-top: 17px;
 }
+.car_review li:hover p{
+    text-decoration: underline;
+}
 .car_review .as  p{
     letter-spacing: -0.4px;
     margin-top: 29px;
@@ -1988,24 +2070,62 @@ align-items: center;
     background-size: 19px; 
 }
 .car_review .m_r span::before{
-    background: url(../img/car_list4_icon.jpg);
-    background-size: 19px; 
-}
-.car_review .car_re span::before{
     background: url(../img/car_list5_icon.jpg);
     background-size: 19px; 
 }
-.car_review .herald span::before{
+.car_review .car_re span::before{
     background: url(../img/car_list6_icon.jpg);
     background-size: 19px; 
 }
-.car_review .the_eye span::before{
+.car_review .herald span::before{
     background: url(../img/car_list7_icon.jpg);
     background-size: 19px; 
 }
-.car_review .a_isu span::before{
+.car_review .the_eye span::before{
     background: url(../img/car_list8_icon.jpg);
     background-size: 19px; 
+}
+.car_review .a_isu span::before{
+    background: url(../img/car_list4_icon.jpg);
+    background-size: 19px; 
+}
+
+.car_review .cr_1 span::before{
+    background: url(../img/cr_icon1.jpg);
+    background-size: 19px; 
+}
+.car_review .cr_2 span::before{
+    background: url(../img/cr_icon2.jpg);
+    background-size: 19px; 
+}
+.car_review .cr_3 span::before{
+    background: url(../img/cr_icon3.jpg);
+    background-size: 19px; 
+}
+.car_review .cr_4 span::before{
+    background: url(../img/cr_icon4.jpg);
+    background-size: 19px; 
+}
+.car_review .cr_5 span::before{
+    background: url(../img/cr_icon5.jpg);
+    background-size: 19px; 
+}
+.car_review .cr_6 span::before{
+    background: url(../img/car_list3_icon.jpg);
+    background-size: 19px; 
+}
+.car_review .cr_7 span::before{
+    background: url(../img/cr_icon7.png);
+    background-size: 19px; 
+}
+.car_review .cr_8 span::before{
+    background: url(../img/cr_icon8.jpg);
+    background-size: 19px; 
+}
+.cr_3 div{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
 }
 
 .car_review li .pic{
@@ -2035,7 +2155,7 @@ align-items: center;
     transition: .6s all ease 0s;
 }
 .car_review li:hover img{
-    transform:scale(1.1);
+    transform:scale(1.05);
 }
 .motor p i{
 display: inline-block;
@@ -2066,6 +2186,9 @@ vertical-align: middle;
     align-items: center;
     color: #606060;
 }
+.eval:hover{
+    text-decoration: underline;
+}
 .owner .title .eval::after{
     content: "";
     display: flex;
@@ -2079,6 +2202,10 @@ vertical-align: middle;
 .owner_list{
     display: flex;
 }
+.owner_list li:hover p{
+    text-decoration: underline;
+}
+
 .owner_list p{
     margin: 12px 0 24px;
 }
@@ -2096,8 +2223,11 @@ vertical-align: middle;
 }
 .owner_list .pic img{
     width: 100%;
+    transition: .6s all ease 0s;
 }
-
+.owner_list li:hover img{
+    transform: scale(1.05);
+}
 
 
 .webtoon_wrap{
@@ -3139,6 +3269,7 @@ border-top: 1px solid #ebebeb;
     width: 790px;
     overflow: hidden;
 }
+.short_video_wrap .next,.short_video_wrap .prev,
 .month_new .next2,.month_new .prev2,
 .best_seller .next,.best_seller .prev,
 .recipe_theme2 .prev,.recipe_theme2 .next,
@@ -3153,6 +3284,8 @@ border-top: 1px solid #ebebeb;
     height: 36px;
     background: white;
 }
+
+.short_video_wrap .prev,
 .month_new .prev2,
 .best_seller .prev,
 .recipe_theme2 .prev,
@@ -3160,6 +3293,7 @@ border-top: 1px solid #ebebeb;
     left: -12px;
     transform: rotate(180deg)
 }
+.short_video_wrap .next,
 .best_seller .next,
 .month_new .next2,
 .recipe_theme2 .next,
@@ -3167,6 +3301,14 @@ border-top: 1px solid #ebebeb;
     top:44%;
     right: -30px;
 }
+.short_video_wrap .next{
+    top: 46%;
+}
+.short_video_wrap .prev{
+    top: 41%;
+}
+
+.short_video_wrap .next::after,.short_video_wrap .prev::after,
 .month_new .next2::after,.month_new .prev2::after,
 .best_seller .next::after,.best_seller .prev::after,
 .recipe_theme2 .prev::after,.recipe_theme2 .next::after,
@@ -3961,7 +4103,9 @@ content: "";
 
 
 
-
+.more_view{
+    cursor: pointer;
+}
 
 .more_view button{
     font-size: 1.3rem;
@@ -3971,6 +4115,7 @@ content: "";
     display: flex;
     align-items: center;
     cursor: pointer;
+
 }
 .more_view div{
     width: 10px;

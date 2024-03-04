@@ -433,6 +433,46 @@ $(document).ready(function() {
     $(".month_new>.prev2").hide(); 
 });
 
+$(".short_video_wrap> .next").click(function(){
+    
+    count++
+    if(count>2){count=0}
+        $(".s_v_list").css("transform",`translateX(${(-40.5*count)}%)`)
+    if(count==2){
+        $(".short_video_wrap> .next").hide()
+        $(".s_v_list").css("transform",`translateX(-60.8%)`)
+     }else {
+     $(".short_video_wrap>.next").show()
+    }
+    if (count === 0) {
+        $(".short_video_wrap>.prev").hide();
+    } else {
+        $(".short_video_wrap>.prev").show();
+    }
+})
+$(".short_video_wrap> .prev").click(function(){
+    count--
+    if(count<0){count=2}
+    $(".s_v_list").css("transform",`translateX(${(-40.5*count)}%)`)
+    if(count==0){
+        $(".short_video_wrap>.prev").hide()
+     }else{
+     $(".short_video_wrap> .prev").show()
+    }
+    if(count==1){
+        $(".s_v_list").css("transform",`translateX(-20%)`)
+    }
+    if(count==2){
+        $(".short_video_wrap>.next").hide()
+     }else {
+     $(".short_video_wrap> .next").show()
+    }
+    
+})
+$(document).ready(function() {
+    $(".short_video_wrap>.prev").hide(); 
+});
+
 
 $(".main_news .m_news_arrow .next_b").click(function(){
     count++
