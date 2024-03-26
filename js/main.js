@@ -499,7 +499,20 @@ $(".main_news .m_news_arrow .prev_b").click(function(){
 
 
 
+// setInterval(function(){
+//     count++
+//     if(count>2){count=0}
+//         $(".mini_ad").css("transform",`translateX(${(-33.3*count)}%)`)
+//     // 기차칸 li태그가 전부 선택되서 on클래스가 지워지고
+//     // 순번에 맞는 기차칸 li태그만 on클래스가 추가가 되면 됨
+//     $(".mini_ad>li").removeClass("on")
+//     $(".mini_ad>li").eq(count).addClass("on")
+//     $(".page_ad>li").removeClass("on")
+//     $(".page_ad>li").eq(count).addClass("on")
+    
 
+
+// },3000)
 
 
 

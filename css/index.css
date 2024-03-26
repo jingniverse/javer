@@ -5042,7 +5042,7 @@ justify-content: space-between;
     cursor: pointer;
 }
 .whale .down,.whale .naver_app{
-    display: none;
+    display: flex;
     flex-flow: column wrap;
     height: 42px;
     align-content:flex-start;
@@ -5089,6 +5089,15 @@ justify-content: space-between;
 .ad_right2 img{
     width: 100%;
     height: 100%;
+}
+.mini_ad_wrap{
+    width: 350px;
+    overflow: hidden;
+}
+.mini_ad{
+    transition: .4s all ease 0.5s;
+    display: flex;
+    width: 1050px;
 }
 .page_ad{
     bottom: 50%;
