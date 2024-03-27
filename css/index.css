@@ -4076,6 +4076,9 @@ content: "";
     display: flex;
     transition: .6s all ease 0s;
 }
+.mn_list{
+    width: 3375px;
+}
 .mn_wrap,.bs_wrap{
     width: 790px;
     overflow: hidden;

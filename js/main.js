@@ -396,10 +396,10 @@ $(document).ready(function() {
 $(".month_new> .next2").click(function(){
     
     count++
-    if(count>3){count=0}
-        $(".mn_list").css("transform",`translateX(${(-30.3*count)}%)`)
-    if(count==3){
-        $(".mn_list").css("transform",`translateX(-70.7%)`)
+    if(count>4){count=0}
+        $(".mn_list").css("transform",`translateX(${(-24.2*count)}%)`)
+    if(count==4){
+        $(".mn_list").css("transform",`translateX(-77%)`)
         $(".month_new> .next2").hide()
      }else {
      $(".month_new>.next2").show()
@@ -412,20 +412,20 @@ $(".month_new> .next2").click(function(){
 })
 $(".month_new> .prev2").click(function(){
     count--
-    if(count<0){count=3}
+    if(count<0){count=4}
     $(".mn_list").css("transform",`translateX(${(-20.2*count)}%)`)
     if(count==1){
         $(".mn_list").css("transform",`translateX(-10%)`)
     }
     if(count==0){
         $(".month_new>.prev2").hide()
-     }else{
-     $(".month_new> .prev2").show()
+    }else{
+    $(".month_new> .prev2").show()
     }
-    if(count==3){
+    if(count==4){
         $(".month_new>.next2").hide()
-     }else {
-     $(".month_new> .next2").show()
+    }else {
+    $(".month_new> .next2").show()
     }
     
 })
@@ -441,8 +441,8 @@ $(".short_video_wrap> .next").click(function(){
     if(count==2){
         $(".short_video_wrap> .next").hide()
         $(".s_v_list").css("transform",`translateX(-60.8%)`)
-     }else {
-     $(".short_video_wrap>.next").show()
+    }else {
+    $(".short_video_wrap>.next").show()
     }
     if (count === 0) {
         $(".short_video_wrap>.prev").hide();
@@ -456,16 +456,16 @@ $(".short_video_wrap> .prev").click(function(){
     $(".s_v_list").css("transform",`translateX(${(-40.5*count)}%)`)
     if(count==0){
         $(".short_video_wrap>.prev").hide()
-     }else{
-     $(".short_video_wrap> .prev").show()
+    }else{
+    $(".short_video_wrap> .prev").show()
     }
     if(count==1){
         $(".s_v_list").css("transform",`translateX(-20%)`)
     }
     if(count==2){
         $(".short_video_wrap>.next").hide()
-     }else {
-     $(".short_video_wrap> .next").show()
+    }else {
+    $(".short_video_wrap> .next").show()
     }
     
 })
@@ -567,6 +567,7 @@ $(".main_news .m_news_arrow .prev_b").click(function(){
         $('.web_toon_more').removeClass("active")
         $('.recipe_more').removeClass("active")
         $('.living_list.more').removeClass("active")
+        $('.bookstore_more').removeClass("active")
 
         $(".webtoon .more_view").removeClass('off')
         $(".beauty .more_view").removeClass('off')
