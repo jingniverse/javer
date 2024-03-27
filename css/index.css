@@ -4093,10 +4093,6 @@ content: "";
     color: #606060;
     font-weight: normal;
 }
-.month_new .next2,.best_seller .next{
-    /* right: 0; */
-}
-
 .more_view{
     cursor: pointer;
 }
@@ -4108,7 +4104,6 @@ content: "";
     display: flex;
     align-items: center;
     cursor: pointer;
-
 }
 .more_view div{
     width: 10px;
@@ -4152,12 +4147,10 @@ content: "";
 }
 /* .more_view button::after{
     content: "";
-    
     background: url(../img/sp_main.ae81c9d5.png) no-repeat -649px -473px;
 	width: 12px;
 	height: 12px;
 } */
-
 .right_content{
     margin-top: 1px;
     max-width: 872px;
@@ -5294,9 +5287,6 @@ footer .notice div{
     display: flex;
     flex-flow: column;
 }
-.c_service .whale_b{
-    /* letter-spacing: -1.2px; */
-}
 .c_service>a{
     margin-left: 12px;
 }    
@@ -5305,7 +5295,7 @@ footer .notice div{
     margin-top: 5px;
 }
 .c_service .baro{
-   margin-top: 6px;
+    margin-top: 6px;
 }
 .c_service span:hover{
     text-decoration: underline;
@@ -5319,18 +5309,18 @@ footer .notice div{
     margin-left: 11px;
 }
 .c_service .n_company>a{
-     background: url(../img/black_naver.png);
+    background: url(../img/black_naver.png);
     background-size: 48px;
     display: inline-block;
     width: 48px;
     height: 48px;
     margin-left: 11px;
- }
- .last_of_last{
+}
+.last_of_last{
     display: flex;
     justify-content: center;
-     font-size: 1.3rem;
-     padding: 22px 0 0;
+    font-size: 1.3rem;
+    padding: 22px 0 0;
     }
 .last_of_last .privacy,
 .last_of_last .company{
@@ -5354,7 +5344,6 @@ footer .notice div{
 .last_of_last li:last-of-type{
     margin-left: 7px;
 }
-
 .last_of_last li+li:before{
     content: "";
     display: flex;
@@ -5365,11 +5354,7 @@ footer .notice div{
 }
 .last_of_last li+li.company:before{
     display: none;
-    
 }
-
-
-
 
 
 /* IE9,10 */
@@ -5380,10 +5365,10 @@ footer .notice div{
     }
 } 
 @media all and (min-width:2560px){
- 
     .wrap{width: 100%; max-width: 1730px;
         box-sizing: border-box;
-margin: 0 auto;}
+        margin: 0 auto;
+    }
 .right_content{
     max-width: 870px;
     width: 100%;
