@@ -89,7 +89,7 @@ $(document).ready(function(){
 
         $( ".m_news_type>li>a").removeClass('on')
         $(this).addClass('on')
- 
+
     })
 
 
@@ -176,8 +176,8 @@ $(".edition_s .next").click(function(){
     $(".e_s_list").css("transform",`translateX(${(-25*count)}%)`)
     if(count==3){
         $(".edition_s .next").hide()
-     }else {
-     $(".edition_s .next").show()
+    }else {
+    $(".edition_s .next").show()
     }
     if (count === 0) {
         $(".edition_s .prev").hide();
@@ -191,13 +191,13 @@ $(".edition_s .prev").click(function(){
     $(".e_s_list").css("transform",`translateX(${(-25*count)}%)`)
     if(count==0){
         $(".edition_s .prev").hide()
-     }else{
-     $(".edition_s .prev").show()
+    }else{
+    $(".edition_s .prev").show()
     }
     if(count==3){
         $(".edition_s .next").hide()
-     }else {
-     $(".edition_s .next").show()
+    }else {
+    $(".edition_s .next").show()
     }
     
 })
@@ -212,8 +212,8 @@ $(".best_league .next").click(function(){
     $(".best_l_list").css("transform",`translateX(${(-25*count)}%)`)
     if(count==3){
         $(".best_league .next").hide()
-     }else {
-     $(".best_league .next").show()
+    }else {
+    $(".best_league .next").show()
     }
     if (count === 0) {
         $(".best_league .prev").hide();
@@ -227,13 +227,13 @@ $(".best_league .prev").click(function(){
     $(".best_l_list").css("transform",`translateX(${(-25*count)}%)`)
     if(count==0){
         $(".best_league .prev").hide()
-     }else{
-     $(".best_league .prev").show()
+    }else{
+    $(".best_league .prev").show()
     }
     if(count==3){
         $(".best_league .next").hide()
-     }else {
-     $(".best_league .next").show()
+    }else {
+    $(".best_league .next").show()
     }
     
 })
@@ -251,8 +251,8 @@ $(".car_content_wrap .next").click(function(){
     $(".car_content").css("transform",`translateX(-69%)`)
     if(count==1){
         $(".car_content_wrap .next").hide()
-     }else {
-     $(".car_content_wrap .next").show()
+    }else {
+    $(".car_content_wrap .next").show()
     }
     if (count === 0) {
         $(".car_content_wrap .prev").hide();
@@ -266,13 +266,13 @@ $(".car_content_wrap .prev").click(function(){
     $(".car_content").css("transform",`translateX(0%)`)
     if(count==0){
         $(".car_content_wrap .prev").hide()
-     }else{
-     $(".car_content_wrap .prev").show()
+    }else{
+    $(".car_content_wrap .prev").show()
     }
     if(count==1){
         $(".car_content_wrap .next").hide()
-     }else {
-     $(".car_content_wrap .next").show()
+    }else {
+    $(".car_content_wrap .next").show()
     }
     
 })
@@ -287,8 +287,8 @@ $(".recipe_theme>.next").click(function(){
     $(".r_t_list").css("transform",`translateX(${(-20*count)}%)`)
     if(count==4){
         $(".recipe_theme>.next").hide()
-     }else {
-     $(".recipe_theme>.next").show()
+    }else {
+    $(".recipe_theme>.next").show()
     }
     if (count === 0) {
         $(".recipe_theme>.prev").hide();
@@ -302,13 +302,13 @@ $(".recipe_theme>.prev").click(function(){
     $(".r_t_list").css("transform",`translateX(${(-20*count)}%)`)
     if(count==0){
         $(".recipe_theme> .prev").hide()
-     }else{
-     $(".recipe_theme> .prev").show()
+    }else{
+    $(".recipe_theme> .prev").show()
     }
     if(count==4){
         $(".recipe_theme> .next").hide()
-     }else {
-     $(".recipe_theme> .next").show()
+    }else {
+    $(".recipe_theme> .next").show()
     }
     
 })
@@ -324,8 +324,8 @@ $(".recipe_theme2> .next").click(function(){
     $(".r_t_list_more").css("transform",`translateX(${(-20*count)}%)`)
     if(count==4){
         $(".recipe_theme2> .next").hide()
-     }else {
-     $(".recipe_theme2>.next").show()
+    }else {
+    $(".recipe_theme2>.next").show()
     }
     if (count === 0) {
         $(".recipe_theme2>.prev").hide();
@@ -339,13 +339,13 @@ $(".recipe_theme2> .prev").click(function(){
     $(".r_t_list_more").css("transform",`translateX(${(-20*count)}%)`)
     if(count==0){
         $(".recipe_theme2>.prev").hide()
-     }else{
-     $(".recipe_theme2> .prev").show()
+    }else{
+    $(".recipe_theme2> .prev").show()
     }
     if(count==4){
         $(".recipe_theme2>.next").hide()
-     }else {
-     $(".recipe_theme2> .next").show()
+    }else {
+    $(".recipe_theme2> .next").show()
     }
     
 })
@@ -361,8 +361,8 @@ $(".best_seller> .next").click(function(){
     if(count==3){
         $(".bs_list").css("transform",`translateX(-70.7%)`)
         $(".best_seller> .next").hide()
-     }else {
-     $(".best_seller>.next").show()
+    }else {
+    $(".best_seller>.next").show()
     }
     if (count === 0) {
         $(".best_seller>.prev").hide();
@@ -379,13 +379,13 @@ $(".best_seller> .prev").click(function(){
     }
     if(count==0){
         $(".best_seller>.prev").hide()
-     }else{
-     $(".best_seller> .prev").show()
+    }else{
+    $(".best_seller> .prev").show()
     }
     if(count==3){
         $(".best_seller>.next").hide()
-     }else {
-     $(".best_seller> .next").show()
+    }else {
+    $(".best_seller> .next").show()
     }
     
 })
@@ -393,36 +393,41 @@ $(document).ready(function() {
     $(".best_seller>.prev").hide(); 
 });
 
+
+let mcount=0
 $(".month_new> .next2").click(function(){
     
-    count++
-    if(count>4){count=0}
-        $(".mn_list").css("transform",`translateX(${(-24.2*count)}%)`)
-    if(count==4){
-        $(".mn_list").css("transform",`translateX(-77%)`)
+    mcount++
+    if(mcount>4){mcount=0}
+        $(".mn_list").css("transform",`translateX(${(-24.2*mcount)}%)`)
+    if(mcount==4){
+        $(".mn_list").css("transform",`translateX(-76.59%)`)
         $(".month_new> .next2").hide()
-     }else {
-     $(".month_new>.next2").show()
+    }else {
+    $(".month_new>.next2").show()
     }
-    if (count === 0) {
+    if (mcount === 0) {
         $(".month_new>.prev2").hide();
     } else {
         $(".month_new>.prev2").show();
     }
 })
 $(".month_new> .prev2").click(function(){
-    count--
-    if(count<0){count=4}
-    $(".mn_list").css("transform",`translateX(${(-20.2*count)}%)`)
-    if(count==1){
-        $(".mn_list").css("transform",`translateX(-10%)`)
+    mcount--
+    if(mcount<0){mcount=4}
+    $(".mn_list").css("transform",`translateX(${(-17.5*mcount)}%)`)
+    if(mcount==1){
+        $(".mn_list").css("transform",`translateX(-4%)`)
     }
-    if(count==0){
+    if(mcount==2){
+        $(".mn_list").css("transform",`translateX(-28.25%)`)
+    }
+    if(mcount==0){
         $(".month_new>.prev2").hide()
     }else{
     $(".month_new> .prev2").show()
     }
-    if(count==4){
+    if(mcount==4){
         $(".month_new>.next2").hide()
     }else {
     $(".month_new> .next2").show()
@@ -552,6 +557,9 @@ $(".main_news .m_news_arrow .prev_b").click(function(){
     })
     $(".recipe .more_view").click(function(){
         $('.recipe_more').addClass("active")
+    })
+    $(".int .more_view").click(function(){
+        $('.int .recipe_more').addClass("active")
     })
     $(".living .more_view").click(function(){
         $('.living_list.more').addClass("active")

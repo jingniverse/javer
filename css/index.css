@@ -3042,7 +3042,7 @@ letter-spacing:-0.4px;
     background: url(../img/아이린토2.jpg);
     background-size: 20px;
 }
-.recipe_wrap{
+.recipe_wrap,.int_wrap{
     width: 790px;
     overflow: hidden;
     padding: 19px 20px 0;
@@ -3103,6 +3103,10 @@ letter-spacing:-0.4px;
     margin: 5px 0 6px;
     font-size: 1.4rem;
 }
+.int_wrap .r_content li p{
+    margin: 0px 0 3px;
+    line-height: 20px;
+}
 .r_content li .title{
     color: #f0b200;
     font-weight: bold;
@@ -3115,6 +3119,9 @@ letter-spacing:-0.4px;
     margin: 25px 20px 8px;
     padding: 24px 0 0;
 }
+.int .review_wrap{
+    margin-top: 24px;
+}
 .recipe_more{
     display: none;
 }
@@ -3123,6 +3130,9 @@ letter-spacing:-0.4px;
 }
 .recipe_more .review_wrap {
     margin-top: 24px;
+}
+.int .recipe_more .review_wrap {
+    margin-top: 1px;
 }
 .review_wrap.more{
     margin-top: 8px;
@@ -3202,8 +3212,7 @@ letter-spacing:-0.4px;
     display: flex;
     border: 1px solid rgba(0,0,0,.06);
     border-radius: 4px; 
-   box-sizing: border-box;
-
+    box-sizing: border-box;
 }
 .r_review li img{
     width: 100%;
@@ -3213,7 +3222,6 @@ letter-spacing:-0.4px;
 .r_review li:hover img{
     transform:scale(1.1);
 }
-
 .r_review .m_1 span::before{
     background: url(../img/m_icon1.jpg);
     background-size: 19px; 
@@ -3443,7 +3451,6 @@ color: #f0b200;
     vertical-align: middle;
     background: #d3d5d7;
 }
-
 .r_t_list .b_1 .name::before{
     background: url(../img/b_icon1.jpg);
     background-size: 19px; 
@@ -3741,9 +3748,11 @@ content: "";
 .mliving_list li{
     margin-bottom: 0;
 }
+.int .pic,
 .mliving_list .pic{
     position: relative;
 }
+.int .pic span,
 .mliving_list .pic span{
     position: absolute;
     font-size: 12px;
@@ -3758,6 +3767,22 @@ content: "";
     background: rgba(0, 0, 0, 0.5);
     color: white;
 }
+.int .review_wrap .pic>span,
+.int .r_review .pic>span{
+    width: 35px;
+    height: 20px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    background: #0e3169;
+}
+
+.int .pic>span::before{
+    display: none;
+}
+
 .mliving_list .pic span::before{
     content: "";
     display: inline-block;
@@ -4096,6 +4121,71 @@ content: "";
     color: #606060;
     font-weight: normal;
 }
+
+.int_1 span::before,
+.int_1 span::before{
+    background: url(../img/int_icon1.jpg);
+    background-size: 19px;
+}
+.int_2 span::before{
+    background: url(../img/int_icon2.png);
+    background-size: 19px;
+}
+.int_3 span::before{
+    background: url(../img/int_icon3.jpg);
+    background-size: 19px;
+}
+.int_13 span::before,
+.int_4 span::before{
+    background: url(../img/int_icon4.jpg);
+    background-size: 19px;
+}
+.int_5 span::before{
+    background: url(../img/int_icon5.png);
+    background-size: 19px;
+}
+.int_6 span::before{
+    background: url(../img/int_icon6.jpg);
+    background-size: 19px;
+}
+.int_14 span::before,
+.int_7 span::before{
+    background: url(../img/int_icon7.png);
+    background-size: 19px;
+}
+.int_8 span::before{
+    background: url(../img/int_icon8.png);
+    background-size: 19px;
+}
+.int_9 span::before{
+    background: url(../img/int_icon9.png);
+    background-size: 19px;
+}
+.int_11 span::before{
+    background: url(../img/int_icon10.jpg);
+    background-size: 19px;
+}
+.int_12 span::before{
+    background: url(../img/int_icon11.jpg);
+    background-size: 19px;
+}
+.int_15 span::before{
+    background: url(../img/int_icon12.png);
+    background-size: 19px;
+}
+.int_16 span::before{
+    background: url(../img/int_icon13.jpg);
+    background-size: 19px;
+}
+
+
+
+
+
+
+
+
+
 .more_view{
     cursor: pointer;
 }
