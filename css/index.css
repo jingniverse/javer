@@ -2232,7 +2232,7 @@ vertical-align: middle;
 .webtoon_wrap{
     padding: 0 20px;
 }
-.w_home{
+.w_home,.game_home{
 font-size: 1.4rem;
 height: 50px;
 background: #f5f7f8;
@@ -3162,7 +3162,7 @@ letter-spacing:-0.4px;
 }
 .r_review p{
     letter-spacing: -0.4px;
-    width: 210px ;
+    width: 211px ;
     line-height: 21px;
     margin-top: 17px;
 }
@@ -4185,6 +4185,91 @@ content: "";
 .health .review_wrap li{
     letter-spacing: -.4px;
 }
+.health_more .review_wrap{
+    margin-top: 8px;
+}
+.health_more .review_wrap+.review_wrap{
+    margin-top: 4px;
+}
+.he_10 div:last-of-type{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+.he_10 div:last-of-type p{
+    margin-top: 1px;
+}
+
+.he_23 span::before,
+.he_18 span::before,
+.he_4 span::before,
+.he_2 span::before,
+.he_1 span::before{
+    background: url(../img/he_icon1.jpg);
+    background-size: 19px;
+}
+.he_9 span::before,
+.he_3 span::before{
+    background: url(../img/he_icon2.jpg);
+    background-size: 19px;
+}
+.he_20 span::before,
+.he_15 span::before,
+.he_12 span::before,
+.he_10 span::before,
+.he_6 span::before,
+.he_5 span::before{
+    background: url(../img/he_icon3.jpg);
+    background-size: 19px;
+}
+.he_22 span::before,
+.he_19 span::before,
+.he_17 span::before,
+.he_13 span::before,
+.he_7 span::before{
+    background: url(../img/he_icon4.jpg);
+    background-size: 19px;
+}
+.he_24 span::before,
+.he_21 span::before,
+.he_16 span::before,
+.he_11 span::before,
+.he_8 span::before{
+    background: url(../img/he_icon5.png);
+    background-size: 19px;
+}
+.he_14 span::before{
+    background: url(../img/he_icon6.jpg);
+    background-size: 19px;
+}
+.health_more{display: none;}
+.health_more.active{display: block;}
+.game_home{
+    margin:19px 20px 18px;
+}
+
+.game_home li{
+    display: flex;
+    align-items: center;
+}
+.game_home li+li::before {
+    content: "";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3px;
+    height: 3px;
+    vertical-align: middle;
+    background: #d3d5d7;
+    margin: 0 7px 1px 8px;
+}
+.game_home li+li::before {
+
+
+
+
+
+
 
 
 
@@ -4240,6 +4325,7 @@ content: "";
 .beauty .more_view .material-symbols-outlined{
     color: #8449cb;
 }
+.health .more_view.off,
 .living .more_view.off,
 .beauty .more_view.off,
 .webtoon .more_view.off{
@@ -5502,5 +5588,6 @@ margin-left: 30px ;
 @supports (-webkit-appearance:none) {
 	/* 이 안에 Safari(10.1 이상)에서만 적용할 스타일 작성 */
  
+}
 }
 }

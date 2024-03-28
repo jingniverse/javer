@@ -568,7 +568,11 @@ $(".main_news .m_news_arrow .prev_b").click(function(){
     $(".bookstore .more_view").click(function(){
         $('.bookstore_more').addClass("active")
     })
-
+    $(".health .more_view").click(function(){
+        $('.health_more').addClass("active")
+        $(".health .more_view").addClass('off')
+    })
+    
     $(".main_etc>.content>li>a").click(function(){
         $('.all_list.more').removeClass("active")
         $('.review_wrap.more').removeClass("active")
@@ -576,10 +580,12 @@ $(".main_news .m_news_arrow .prev_b").click(function(){
         $('.recipe_more').removeClass("active")
         $('.living_list.more').removeClass("active")
         $('.bookstore_more').removeClass("active")
+        $('.health_more').removeClass("active")
 
         $(".webtoon .more_view").removeClass('off')
         $(".beauty .more_view").removeClass('off')
         $(".living .more_view").removeClass('off')
+        $(".health .more_view").removeClass('off')
 
     })
     
