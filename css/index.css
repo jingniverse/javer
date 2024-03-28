@@ -3042,7 +3042,7 @@ letter-spacing:-0.4px;
     background: url(../img/아이린토2.jpg);
     background-size: 20px;
 }
-.recipe_wrap,.int_wrap{
+.recipe_wrap,.int_wrap,.health_wrap{
     width: 790px;
     overflow: hidden;
     padding: 19px 20px 0;
@@ -3103,6 +3103,7 @@ letter-spacing:-0.4px;
     margin: 5px 0 6px;
     font-size: 1.4rem;
 }
+.health_wrap .r_content li p,
 .int_wrap .r_content li p{
     margin: 0px 0 3px;
     line-height: 20px;
@@ -3119,6 +3120,7 @@ letter-spacing:-0.4px;
     margin: 25px 20px 8px;
     padding: 24px 0 0;
 }
+.health .review_wrap,
 .int .review_wrap{
     margin-top: 24px;
 }
@@ -4177,7 +4179,12 @@ content: "";
     background: url(../img/int_icon13.jpg);
     background-size: 19px;
 }
-
+.health_wrap .r_content li{
+    letter-spacing: -.4px;
+}
+.health .review_wrap li{
+    letter-spacing: -.4px;
+}
 
 
 
